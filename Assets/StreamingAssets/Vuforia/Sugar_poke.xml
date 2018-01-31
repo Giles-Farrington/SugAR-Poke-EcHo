@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="Chobani-Cherry-5oz-3" size="1.000000 0.704225" />
+    <ImageTarget name="Yogurt-Chobani-Non-Fat-Milk-Blueberry-on-the-Bottom-150g-3t" size="500.000000 391.762451" />
+    <ImageTarget name="Chobani-Fat-Free-Greek-32oz-0" size="1.000000 1.254302" />
     <ImageTarget name="Wish-Bone-Dressing-Western-44_scaled" size="100.000000 100.000000" />
     <ImageTarget name="Wish-Bone-Light-Western-48_scaled" size="100.000000 227.350433" />
     <ImageTarget name="Chobani-Vanilla-32oz-16" size="1.000000 0.940845" />
     <ImageTarget name="Chobani-Coffe-5oz-3" size="1.000000 1.000000" />
     <ImageTarget name="Chobani-Vanilla-5oz-3" size="1.000000 0.673239" />
     <ImageTarget name="Yogurt-Chobani-Non-Fat-Milk-Plain-150g-0t" size="500.000000 317.000000" />
-    <ImageTarget name="Chobani-Fat-Free-Greek-32oz-0" size="1.000000 1.333333" />
     <ImageTarget name="StonyField-Fat-Free-FrenchVanilla-6" size="1.000000 0.750000" />
     <ImageTarget name="PediaSure-GrowGain-4" size="1.000000 0.750000" />
-    <ImageTarget name="Chobani-Cherry-5oz-3" size="1.000000 0.750000" />
     <ImageTarget name="Newman-Lite-Italian-0_scaled" size="100.000000 214.632462" />
     <ImageTarget name="Newman-7s-Zesty-Italian-12_scaled" size="100.000000 143.359375" />
     <ImageTarget name="Kraft-Dressing-Zesty-0Italian-0FZ-8_scaled" size="100.000000 156.054688" />
@@ -29,7 +30,6 @@
     <ImageTarget name="Yogurt-Dannon-Whole-Milk-Strawberry-150g-2t" size="50.000000 50.000000" />
     <ImageTarget name="Yogurt-Dannon-Whole-Milk-Plain-32oz-0t" size="50.000000 50.000000" />
     <ImageTarget name="Yogurt-Dannon-Whole-Milk-Blueberr-150g-2t" size="50.000000 46.106556" />
-    <ImageTarget name="Yogurt-Chobani-Non-Fat-Milk-Blueberry-on-the-Bottom-150g-3t" size="500.000000 500.000000" />
     <ImageTarget name="Yogurt-Chobani-Non-Fat-Milk-Strawberry-on-the-Bottom-150g-3t" size="50.000000 50.000000" />
   </Tracking>
 </QCARConfig>
