@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\EChOResources\Instruction Button Stuff\InstructionsButtonScript.cs" />
      <Compile Include="Assets\EChOResources\TeaspoonCounterContents\CounterScript.cs" />
+     <Compile Include="Assets\Vuforia\Scripts\CameraFocusController.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
