@@ -13,7 +13,7 @@ public class InstructionsButtonScript : MonoBehaviour {
 	// Update is called once per frame
 	public void Button_Click() {
 		
-		Debug.LogError ("Button is pressed");
+
 		if (instructions.activeInHierarchy || instructions.activeSelf) {
 			instructions.SetActive (false);
 		} else {
