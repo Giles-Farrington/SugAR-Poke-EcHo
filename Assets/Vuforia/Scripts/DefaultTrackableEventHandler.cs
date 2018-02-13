@@ -17,8 +17,6 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     #region PRIVATE_MEMBER_VARIABLES
 
     protected TrackableBehaviour mTrackableBehaviour;
-	private string imgTargetName = " ";
-	
 
     #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -47,16 +45,13 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
-			imgTargetName = mTrackableBehaviour.TrackableName;
-            Debug.Log("Trackable FILENAME FUCK YEAH " + imgTargetName + " found");
-			transform.Find("TeaspoonCounter 2 1").GetComponent<CounterScript>().GetTeaspoonValue(imgTargetName);
+            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
             OnTrackingFound();
         }
         else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
                  newStatus == TrackableBehaviour.Status.NOT_FOUND)
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
-			//transform.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().Reset();
             OnTrackingLost();
         }
         else
@@ -110,9 +105,6 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         foreach (var component in canvasComponents)
             component.enabled = false;
     }
-	
-	
-	
 
     #endregion // PRIVATE_METHODS
 }
