@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c26a639cbbed26841bedabe03b8f6c7d
 folderAsset: yes
 timeCreated: 1511181319
+=======
+guid: 4bffffbc8d88b0a4d979198d79211316
+folderAsset: yes
+timeCreated: 1515199265
+>>>>>>> Cloud-Database-access
 licenseType: Pro
 DefaultImporter:
   externalObjects: {}

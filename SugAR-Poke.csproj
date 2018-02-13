@@ -16,7 +16,7 @@
     <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>iOS:9</UnityBuildTarget>
-    <UnityVersion>2017.3.0p3</UnityVersion>
+    <UnityVersion>2017.3.0p4</UnityVersion>
     <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
@@ -301,6 +301,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\EChOResources\TeaspoonCounterContents\CounterScript.cs" />
+    <Compile Include="Assets\FindTspNumEventHandler.cs" />
+    <Compile Include="Assets\SimpleCloudHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
   </ItemGroup>
@@ -316,6 +318,7 @@
     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
     <None Include="Assets\VuforiaFiles\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />
     <None Include="Assets\VuforiaFiles\Editor\Vuforia\Emulator\VuforiaEmulator.xml" />
+    <None Include="Assets\VuforiaFiles\Editor\Vuforia\ForPrint\ModelTarget\readme_3dprint.txt" />
     <None Include="Assets\VuforiaFiles\Editor\Vuforia\TargetsetData\VuforiaMars_Object_info.xml" />
     <None Include="Assets\VuforiaFiles\Editor\Vuforia\VuforiaMars_ModelTarget\authoringinfo.xml" />
     <None Include="Assets\VuforiaFiles\Editor\Vuforia\VuforiaMars_VuMark\authoringinfo.xml" />
