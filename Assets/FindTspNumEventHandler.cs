@@ -59,8 +59,10 @@ public class FindTspNumEventHandler : MonoBehaviour, ITrackableEventHandler {
             {
                 component.enabled = true;
             }
-
-			Debug.Log("FOUND IT MOFCKER: " + mTrackableBehaviour.TrackableName);
+			Vector3 delta = Camera.main.transform.position - mTrackableBehaviour.transform.position;
+			float distance = delta.magnitude;
+			Debug.Log("FOUND IT: " + mTrackableBehaviour.TrackableName);
+			Debug.Log("DISTANCE IS: " + distance);
 		}
 		
 		private void OnTrackingLost()
