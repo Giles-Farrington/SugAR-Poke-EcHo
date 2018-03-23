@@ -37,15 +37,20 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 			Vector3 delta = Camera.main.transform.position - mTrackableBehaviour.transform.position;
 			distance = delta.magnitude;
 			Debug.Log("Trackable DISTANCE IS: " + distance);
-			if(distance >= 0.6){
+			if(distance < 0.3){
+				imgTargetName = mTrackableBehaviour.TrackableName;
+				transform.Find("TeaspoonCounter 2 1").GetComponent<CounterScript>().GetTeaspoonValue(imgTargetName);
+				OnTrackingFound();
+			}
+			else if(distance >= 0.6){
 				Debug.Log("Trackable LOST" + mTrackableBehaviour.TrackableName + " lost");
 				OnTrackingLost();
-				GameObject.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().ResetTarget();
+				
+				//GameObject.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().ResetTarget();
 			}
 		}
 		Vector3 delta2 = Camera.main.transform.position - mTrackableBehaviour.transform.position;
 		distance = delta2.magnitude;
-		
 		
 		
 	}
@@ -64,6 +69,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         TrackableBehaviour.Status newStatus)
     {
 		Debug.Log("DISTANCE: " + distance);
+		Vector3 delta = Camera.main.transform.position - mTrackableBehaviour.transform.position;
+		distance = delta.magnitude;
 		
         if ((newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
@@ -71,7 +78,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 			distance < 0.35)
         {
 			imgTargetName = mTrackableBehaviour.TrackableName;
-            Debug.Log("Trackable FILENAME " + imgTargetName + " found");
+            //Debug.Log("Trackable FILENAME " + imgTargetName + " found");
 			transform.Find("TeaspoonCounter 2 1").GetComponent<CounterScript>().GetTeaspoonValue(imgTargetName);
             OnTrackingFound();
         }
@@ -80,12 +87,12 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         {
             Debug.Log("Trackable LOST" + mTrackableBehaviour.TrackableName + " lost");
 			//transform.Find("TeaspoonCounter 2 1").GetComponent<CounterScript>().DestroyTsp();
-			GameObject.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().ResetTarget();
+			//GameObject.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().ResetTarget();
             OnTrackingLost();
         }
         else
         {
-			GameObject.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().ResetTarget();
+			//GameObject.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().ResetTarget();
             // For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND
             // Vuforia is starting, but tracking has not been lost or found yet
             // Call OnTrackingLost() to hide the augmentations

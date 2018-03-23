@@ -300,6 +300,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EChOResources\FeedbackScript.cs" />
     <Compile Include="Assets\EChOResources\TeaspoonCounterContents\CounterScript.cs" />
     <Compile Include="Assets\FindTspNumEventHandler.cs" />
     <Compile Include="Assets\SimpleCloudHandler.cs" />
@@ -307,7 +308,9 @@
     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\StreamingAssets\Vuforia\Local_SaladDressings_Yogurts.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\Sugar_poke.xml" />
+    <None Include="Assets\StreamingAssets\Vuforia\VendingMachine.xml" />
     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
     <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
