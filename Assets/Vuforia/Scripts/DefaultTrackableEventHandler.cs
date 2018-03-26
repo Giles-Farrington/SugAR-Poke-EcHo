@@ -33,19 +33,21 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     }
 	
 	protected virtual void Update(){
-		if(mTrackableBehaviour && distance < 0.6){
+		Debug.Log("UPDATING!!! DIstance:" + distance);
+		if(mTrackableBehaviour && distance < 0.3){
 			Vector3 delta = Camera.main.transform.position - mTrackableBehaviour.transform.position;
 			distance = delta.magnitude;
 			Debug.Log("Trackable DISTANCE IS: " + distance);
-			if(distance < 0.3){
+			if(distance < 0.1){
+				//TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
 				imgTargetName = mTrackableBehaviour.TrackableName;
 				transform.Find("TeaspoonCounter 2 1").GetComponent<CounterScript>().GetTeaspoonValue(imgTargetName);
 				OnTrackingFound();
 			}
-			else if(distance >= 0.6){
+			else if(distance >= 0.3){
 				Debug.Log("Trackable LOST" + mTrackableBehaviour.TrackableName + " lost");
 				OnTrackingLost();
-				
+				//TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
 				//GameObject.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().ResetTarget();
 			}
 		}
@@ -75,7 +77,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         if ((newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED) &&
-			distance < 0.35)
+			distance < 0.1)
         {
 			imgTargetName = mTrackableBehaviour.TrackableName;
             //Debug.Log("Trackable FILENAME " + imgTargetName + " found");
