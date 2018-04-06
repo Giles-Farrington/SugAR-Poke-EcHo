@@ -15,7 +15,6 @@ public class CounterScript : MonoBehaviour{
 	
     public void GetTeaspoonValue(string fileName)
     {
-		Debug.Log("HERES FILENAME AGAIN!!::: " + fileName);
         //Lines 12-14 get the TextMesh component and set the proper font size and font color
         TextMesh text_mesh = this.GetComponentInChildren<TextMesh>();
         text_mesh.color = new Vector4(1, 1, 1, 1);
@@ -47,12 +46,4 @@ public class CounterScript : MonoBehaviour{
             this.GetComponent<MeshRenderer>().material = backgrounds[1];
         }
     }
-	
-	public void DestroyTsp(){
-		GameObject.Destroy(transform.GetChild(0).gameObject);
-	}
-
-    
-
-	
 }
