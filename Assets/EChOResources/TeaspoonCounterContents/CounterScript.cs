@@ -22,18 +22,18 @@ public class CounterScript : MonoBehaviour{
         string reverseOutput = "";
         string finalOutput = "";
         char[] fileChars = fileName.ToCharArray();
-        int index = fileChars.Length;
+        int index = fileChars.Length - 1;
 
         while(fileChars[index] != '-')
         {
-            if (System.Char.IsDigit(fileChars[i]))
+            if (System.Char.IsDigit(fileChars[index]))
             {
-                reverseOutput += fileChars[i];
+                reverseOutput += fileChars[index];
             }
             index--;
         }
 
-        for(int j = reverseOutput.Length; j > 0 j--){
+		for(int j = reverseOutput.Length - 1; j >= 0; j--){
           finalOutput += reverseOutput[j];
         }
 
@@ -41,7 +41,7 @@ public class CounterScript : MonoBehaviour{
         {
             finalOutput = "Error! \\n Teaspoon value not found!";
         }
-
+		//Debug.LogError ("Final output is " + finalOutput);
         text_mesh.text = finalOutput;
 
 		if (finalOutput == "0")
