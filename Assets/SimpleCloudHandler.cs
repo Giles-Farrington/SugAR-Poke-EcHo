@@ -32,7 +32,7 @@ mIsScanning = scanning;
     var tracker = TrackerManager.Instance.GetTracker<ObjectTracker>();
     tracker.TargetFinder.ClearTrackables(false);
     }
-	//mCloudRecoBehaviour.CloudRecoEnabled = true;
+	
 }
 // Here we handle a cloud target recognition event
 public void OnNewSearchResult(TargetFinder.TargetSearchResult targetSearchResult) {
