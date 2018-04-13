@@ -44,15 +44,15 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 		if(distance[0] == 1){
 			Vector3 delta = Camera.main.transform.position - mTrackableBehaviour.transform.position; //Resets distance to new current image target distance
 			prevDist2 = delta.magnitude;
-			Debug.Log("IMPORTANT IMPORTANT LOOK AT THIS!!!!!!!: " + prevDist);
-			if(prevDist != prevDist2 && prevDist2 != 0.0007){
+			//Debug.Log("IMPORTANT IMPORTANT LOOK AT THIS!!!!!!!: " + prevDist);
+			if(prevDist != prevDist2 ){
 				distance[0] = prevDist2;
 			}
 		}
-		Debug.Log("UPDATING!!! DIstance:" + distance[0]);
-		if(mTrackableBehaviour && distance[0] <= 0.7 && distance[0] != 0.005 && distance[0] != 0.0007){   //Only looks for new distance if current image target distance is less than the maximum distance threshold.
-			if(distance[0] < 0.3 && distance[0] != 0 && distance[0] != 0.0007) {	//If distance is below 0.1m, most likely a new image target and gets the name, displays the added sugar value and calls OnTrackingFound()function
-				Debug.Log("DISTANCE STILL LESS THAN 0.2!! " + distance[0] );
+		Debug.Log("UPDATING!!! DIstance:" + distance[0]);  // 0.00068 < distance < 0.00071  && 0.0048 < distance < 0.0051
+		if(distance[0] <= 0.7){   //Only looks for new distance if current image target distance is less than the maximum distance threshold.
+			if(distance[0] < 0.3) {	//If distance is below 0.1m, most likely a new image target and gets the name, displays the added sugar value and calls OnTrackingFound()function
+				//Debug.Log("DISTANCE STILL LESS THAN 0.2!! " + distance[0] );
 				imgTargetName = mTrackableBehaviour.TrackableName;
 				transform.Find("TeaspoonCounter 2 1").GetComponent<CounterScript>().GetTeaspoonValue(imgTargetName);
 				OnTrackingFound();
@@ -67,13 +67,14 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 		if(distance[0] != 1){
 			Vector3 delta2 = Camera.main.transform.position - mTrackableBehaviour.transform.position; //Resets distance to new current image target distance
 			distance[0] = delta2.magnitude;
-			Debug.Log("NEW Trackable DISTANCE IS: " + distance[0]);
+			//Debug.Log("NEW Trackable DISTANCE IS: " + distance[0]);
 		}
 		if (count < 10){
 			distance[count] = distance[0];
 		}
 		if ((distance[9] == distance[0]) && (distance[0] == distance[3]) && (distance[0] == distance[6]) && distance[0] != 0 && distance[0] != 1){
 			Debug.Log("DISTANCE IS SAME, LOSING TRACKING" + distance[0] + distance[1] + distance[2] + distance[9]);
+			Debug.Log("LKAJFSKAHFLKSALKHDSLKJAHDLKAHALKJHDLKADkahskaskadshkjashdkashkadhkjashdkjahdkajhdkjsahkashkahdkahdskashdkjahdkajshdkahdkasjdhaksjhaksjd");
 			OnTrackingLost();
 			count = -1;
 			prevDist = distance[0];
