@@ -76,6 +76,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     {
 		if(newStatus == TrackableBehaviour.Status.TRACKED && flag == 1){
 			mStatus = TrackableBehaviour.Status.DETECTED;
+			flag = 0;
 			Debug.Log("SHOULD BE RESETTING AFTE RIMAGE SHWONE");
 		}
         if ((newStatus == TrackableBehaviour.Status.DETECTED ||
