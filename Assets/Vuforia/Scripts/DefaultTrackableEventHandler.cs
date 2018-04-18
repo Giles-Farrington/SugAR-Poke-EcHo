@@ -1,3 +1,10 @@
+/* /* /*==============================================================================
+Copyright (c) 2017 PTC Inc. All Rights Reserved.
+
+Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Protected under copyright and other laws.
+==============================================================================*/
 /*==============================================================================
 Copyright (c) 2017 PTC Inc. All Rights Reserved.
 
@@ -16,80 +23,45 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 {
     #region PRIVATE_MEMBER_VARIABLES
 
-    protected TrackableBehaviour mTrackableBehaviour;
-	private string imgTargetName = " ";
-	private float[] distance = new float[10];
-	private int count = 0;
-	private float prevDist = 0;
-	private float prevDist2 = 0;
+    protected TrackableBehaviour mTrackableBehaviour;	//Gives access to the trackable behaviour of image targets
+	protected TrackableBehaviour.Status mStatus;		//An enum used specifically for calling the OnTrackableStateChanged method, status can be set to different values. Used for newStatus within the OnTrackableState Changed method.
+	protected TrackableBehaviour.Status nStatus;		//Same as above ^^, although rather than being used for newStatus within the OnTrackableStateChanged method, it's used for previousStatus
+	private string imgTargetName = " ";					//String that is consistently set to current image target name
+	private double distance = 0.4;						//Value consistently updated with current distance 
+	private double[] prevDist = new double[4];			//Used for determining whether or not distance is same multiple frames in a row within OnTrackableStateChanged method
+	private int count = 0;								//Keeps track of prevDist current array value
 	
 
     #endregion // PRIVATE_MEMBER_VARIABLES
 
     #region UNTIY_MONOBEHAVIOUR_METHODS
 
-	//On start, creates trackable behaviour event handler
     protected virtual void Start()
     {
-		distance[0] = 0;
+		
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
+		mStatus = TrackableBehaviour.Status.DETECTED;		//mStatus initialized as DETECTED so first image target may be found
+		nStatus = TrackableBehaviour.Status.NOT_FOUND;		//nStatus initialized as NOT_FOUND and never changes, since previousStatus doesn't matter when finding new image target
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
     }
-	
-	//On update gets current distance of the current image target and depending on distance of current image target, acts appropiately. 
-	
-	//Essentially 
 	protected virtual void Update(){
-		if(distance[0] == 1){
-			Vector3 delta = Camera.main.transform.position - mTrackableBehaviour.transform.position; //Resets distance to new current image target distance
-			prevDist2 = delta.magnitude;
-			Debug.Log("IMPORTANT IMPORTANT LOOK AT THIS!!!!!!!: " + prevDist);
-			if(prevDist != prevDist2 && prevDist2 != 0.0007){
-				distance[0] = prevDist2;
-			}
+		Vector3 delta = Camera.main.transform.position - mTrackableBehaviour.transform.position; //Gets updated current image target distance every update frame
+		distance = delta.magnitude;
+		Debug.Log("DISTANCE: " + distance);
+	
+		if(distance < 0.073){		//If distance is below 0.073, that is lower than the camera can track. This is mostly for initialization since distance defaults to a really low number.
+			distance = 0.4;			//thus we set the distance in between the minimum and maximum threshold, which as of now is 0.3 and 0.5, so it's set to 0.4
 		}
-		Debug.Log("UPDATING!!! DIstance:" + distance[0]);
-		if(mTrackableBehaviour && distance[0] <= 0.7 && distance[0] != 0.005 && distance[0] != 0.0007){   //Only looks for new distance if current image target distance is less than the maximum distance threshold.
-			if(distance[0] < 0.3 && distance[0] != 0 && distance[0] != 0.0007) {	//If distance is below 0.1m, most likely a new image target and gets the name, displays the added sugar value and calls OnTrackingFound()function
-				Debug.Log("DISTANCE STILL LESS THAN 0.2!! " + distance[0] );
-				imgTargetName = mTrackableBehaviour.TrackableName;
-				transform.Find("TeaspoonCounter 2 1").GetComponent<CounterScript>().GetTeaspoonValue(imgTargetName);
-				OnTrackingFound();
-			}
-			else if(distance[0] >= 0.6){	//If distance is greater than maximum threshold (Currently 0.3m), Calls OnTrackingLost() Function
-				Debug.Log("Trackable LOST" + mTrackableBehaviour.TrackableName + " lost");
-				OnTrackingLost();
-				//While utilizing the cloud database scene, uncomment line of code below. When switching back to local database scenes, make sure to re-comment 
-				//GameObject.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().ResetTarget();
-			}
+		if (distance > 0.5){		//If distance is above maximum threshold (at the moment it is 0.5)
+			count = 0;				//count resets
+			OnTrackingLostTwo();	//OnTrackingLostTwo() is called. Which removes the added sugar AR display on screen. 
+									//OnTrackingLostTwo() is called rather than OnTrackingLost() because if OnTrackingLost() is called outside of OnTrackableStateChanged method it messes with stuff.
 		}
-		if(distance[0] != 1){
-			Vector3 delta2 = Camera.main.transform.position - mTrackableBehaviour.transform.position; //Resets distance to new current image target distance
-			distance[0] = delta2.magnitude;
-			Debug.Log("NEW Trackable DISTANCE IS: " + distance[0]);
-		}
-		if (count < 10){
-			distance[count] = distance[0];
-		}
-		if ((distance[9] == distance[0]) && (distance[0] == distance[3]) && (distance[0] == distance[6]) && distance[0] != 0 && distance[0] != 1){
-			Debug.Log("DISTANCE IS SAME, LOSING TRACKING" + distance[0] + distance[1] + distance[2] + distance[9]);
-			OnTrackingLost();
-			count = -1;
-			prevDist = distance[0];
-			distance[0] = 1;
-		}
-		if(count >= 10 && count != -1){
-			count = -1;
-		}
-		else if(count >= 10){
-			count = 0;
-		}
-		count = count + 1;
-		
-		
-	}
-
+		else if (distance < 0.3){		//If distance is below minimum threshold, OnTrackableStateChanged() is called so new image target can be tracked and added sugar displayed on screen
+			OnTrackableStateChanged(nStatus, mStatus);
+		}	
+	} 
 
     #endregion // UNTIY_MONOBEHAVIOUR_METHODS
 
@@ -99,18 +71,60 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     ///     Implementation of the ITrackableEventHandler function called when the
     ///     tracking state changes.
     /// </summary>
-    public void OnTrackableStateChanged(		//Function is called on a trackable state change
+    public void OnTrackableStateChanged(
         TrackableBehaviour.Status previousStatus,
         TrackableBehaviour.Status newStatus)
     {
+		//if new image target is ready to be tracked by camera and last image target was cleared by having same distance for multiple frames in row, thus mStatus = TrackableBehaviour.Status.NOT_FOUND;
+		if(newStatus == TrackableBehaviour.Status.TRACKED && mStatus == TrackableBehaviour.Status.NOT_FOUND){  
+			mStatus = TrackableBehaviour.Status.DETECTED;				//mStatus is reset to DETECTED so new image target can be tracked and added sugar value displayed
+			Debug.Log("SHOULD BE RESETTING AFTER IMAGE SHOWN");
+		}
+        if ((newStatus == TrackableBehaviour.Status.DETECTED ||			//if new target is just found and currently being detected or tracked and the distance is less than the minimum threshold 
+            newStatus == TrackableBehaviour.Status.TRACKED ||
+            newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED) &&
+			distance < 0.3)
+        {
+            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+			imgTargetName = mTrackableBehaviour.TrackableName;			//Gets current image target name 
+			transform.Find("TeaspoonCounter 2 1").GetComponent<CounterScript>().GetTeaspoonValue(imgTargetName);	//Calls teaspoon counter script to get added sugar info
+            OnTrackingFound();				//OnTrackingFound() is called in order to display added sugar info on screen and tracks current image target
+			
+			//Next 8 lines specifically written to determine whether or not image target left screen or not by checking to see if distance is exactly the same for multiple frames in a row.
+			prevDist[count] = distance;				//Sets prevDist of current count to current distance 	
+			if (count == 3){						//If count makes it to 3, then most likely distance has been exactly the same for 4 frames in a row (0,1,2,3)
+				if(prevDist[0] == prevDist[3]){		//If the first set prevDist is equal to newest set prevDist, then distance has definitely been exactly the same for 4 frames in a row
+					Debug.Log("FLAG SET OFF!!!");
+					mStatus = TrackableBehaviour.Status.NOT_FOUND;	//mStatus is set to NOT_FOUND so next time OnTrackableStateChanges is called through update function it won't display added sugar info and stops tracking
+				}
+				count = -1; 	//Since maximum count value has been reached, resets to -1 due to next line setting it back to 0
+			}
+			count = count + 1;	//increments count tracker
+			
+        }
+        else if (previousStatus == TrackableBehaviour.Status.TRACKED &&		//if previousStatus TRACKED and newStatus NOT_FOUND 
+                 newStatus == TrackableBehaviour.Status.NOT_FOUND)
+        {
+            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+			count = 0;				//count reset to 0
+            OnTrackingLost();		//Removes added sugar value from screen and drops tracking of current image target
+        }
+        else
+        {
+            // For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND
+            // Vuforia is starting, but tracking has not been lost or found yet
+            // Call OnTrackingLost() to hide the augmentations
+			count = 0;		//count reset to 0
+            OnTrackingLost();		//Removes added sugar value from screen and drops tracking of current image target
+        }
 		
     }
-	
+
     #endregion // PUBLIC_METHODS
 
     #region PRIVATE_METHODS
 
-    protected virtual void OnTrackingFound()	//Called when image target is found
+    protected virtual void OnTrackingFound()	//Starts tracking and displays added sugar values
     {
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
@@ -130,7 +144,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     }
 
 
-    protected virtual void OnTrackingLost()		//Called when image target is lost
+    protected virtual void OnTrackingLost()		//Stops tracking and displaying added sugar values (Called inside OnTrackableStateChanged method)
     {
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
@@ -149,8 +163,23 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             component.enabled = false;
     }
 	
-	
-	
+	protected virtual void OnTrackingLostTwo(){		//Stops tracking and displaying added sugar values without messing with OnTrackableStateChanged method (Called outside of the OnTrackableStateChanged method)
+		var rendererComponents = GetComponentsInChildren<Renderer>(true);
+        var colliderComponents = GetComponentsInChildren<Collider>(true);
+        var canvasComponents = GetComponentsInChildren<Canvas>(true);
+
+        // Disable rendering:
+        foreach (var component in rendererComponents)
+            component.enabled = false;
+
+        // Disable colliders:
+        foreach (var component in colliderComponents)
+            component.enabled = false;
+
+        // Disable canvas':
+        foreach (var component in canvasComponents)
+            component.enabled = false;
+	}
 
     #endregion // PRIVATE_METHODS
 }
