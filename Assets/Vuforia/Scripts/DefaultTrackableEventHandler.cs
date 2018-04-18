@@ -41,7 +41,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 		
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
 		mStatus = TrackableBehaviour.Status.DETECTED;		//mStatus initialized as DETECTED so first image target may be found
-		nStatus = TrackableBehaviour.Status.NOT_FOUND;		//nStatus initialized as NOT_FOUND and never changes, since previousStatus doesn't matter when finding new image target
+		nStatus = TrackableBehaviour.Status.NOT_FOUND;		//nStatus initialized as NOT_FOUND and never changes, since previousStatus doesn't really matter when finding new image target
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
     }
@@ -58,7 +58,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 			OnTrackingLostTwo();	//OnTrackingLostTwo() is called. Which removes the added sugar AR display on screen. 
 									//OnTrackingLostTwo() is called rather than OnTrackingLost() because if OnTrackingLost() is called outside of OnTrackableStateChanged method it messes with stuff.
 		}
-		else if (distance < 0.3){		//If distance is below minimum threshold, OnTrackableStateChanged() is called so new image target can be tracked and added sugar displayed on screen
+		else if (distance < 0.3){	//If distance is below minimum threshold, OnTrackableStateChanged() is called so new image target can be tracked and added sugar displayed on screen
 			OnTrackableStateChanged(nStatus, mStatus);
 		}	
 	} 
@@ -90,14 +90,14 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 			transform.Find("TeaspoonCounter 2 1").GetComponent<CounterScript>().GetTeaspoonValue(imgTargetName);	//Calls teaspoon counter script to get added sugar info
             OnTrackingFound();				//OnTrackingFound() is called in order to display added sugar info on screen and tracks current image target
 			
-			//Next 8 lines specifically written to determine whether or not image target left screen or not by checking to see if distance is exactly the same for multiple frames in a row.
+			//Next 8 lines specifically written to determine whether or not image target left screen by checking to see if distance is exactly the same for multiple frames in a row.
 			prevDist[count] = distance;				//Sets prevDist of current count to current distance 	
 			if (count == 3){						//If count makes it to 3, then most likely distance has been exactly the same for 4 frames in a row (0,1,2,3)
 				if(prevDist[0] == prevDist[3]){		//If the first set prevDist is equal to newest set prevDist, then distance has definitely been exactly the same for 4 frames in a row
 					Debug.Log("FLAG SET OFF!!!");
 					mStatus = TrackableBehaviour.Status.NOT_FOUND;	//mStatus is set to NOT_FOUND so next time OnTrackableStateChanges is called through update function it won't display added sugar info and stops tracking
 				}
-				count = -1; 	//Since maximum count value has been reached, resets to -1 due to next line setting it back to 0
+				count = -1; 	//Since maximum count value has been reached, resets to -1 due to next line incrementing by 1 and setting it back to 0
 			}
 			count = count + 1;	//increments count tracker
 			
