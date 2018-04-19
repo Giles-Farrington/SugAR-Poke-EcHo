@@ -33,7 +33,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 	
 
     #endregion // PRIVATE_MEMBER_VARIABLES
-
+[]
     #region UNTIY_MONOBEHAVIOUR_METHODS
 
     protected virtual void Start()
@@ -55,6 +55,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 		}
 		if (distance > 0.5){		//If distance is above maximum threshold (at the moment it is 0.5)
 			count = 0;				//count resets
+			//transform.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().Reset();  //UNCOMMENT this line if using cloud database (WARNING: I HAVE NOT TESTED cloud database since script was rewritten so may not work or receive errors)
 			OnTrackingLostTwo();	//OnTrackingLostTwo() is called. Which removes the added sugar AR display on screen. 
 									//OnTrackingLostTwo() is called rather than OnTrackingLost() because if OnTrackingLost() is called outside of OnTrackableStateChanged method it messes with stuff.
 		}
@@ -107,6 +108,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 			count = 0;				//count reset to 0
+			//transform.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().Reset();  //UNCOMMENT this line if using cloud database (WARNING: I HAVE NOT TESTED cloud database since script was rewritten so may not work or receive errors)
             OnTrackingLost();		//Removes added sugar value from screen and drops tracking of current image target
         }
         else
@@ -115,6 +117,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             // Vuforia is starting, but tracking has not been lost or found yet
             // Call OnTrackingLost() to hide the augmentations
 			count = 0;		//count reset to 0
+			//transform.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().Reset();  //UNCOMMENT this line if using cloud database (WARNING: I HAVE NOT TESTED cloud database since script was rewritten so may not work or receive errors)
             OnTrackingLost();		//Removes added sugar value from screen and drops tracking of current image target
         }
 		
