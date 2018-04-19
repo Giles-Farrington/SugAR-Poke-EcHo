@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Hershey-BigKitKat-OneAndHalfOz-5" size="0.100000 0.024685" />
+    <ImageTarget name="FritoLay-BakedOriginal-OnePointTwoOz-2" size="0.100000 0.157178" />
+    <ImageTarget name="CliffAndCompany-ChocolateChipPeanutCrunch-TwoPointFourOZ-TTL-5" size="0.100000 0.182952" />
+    <ImageTarget name="CliffBarAndCompany-ChocolateChipCliffBar-TwoPointFourOZ-TTL-4" size="0.100000 0.190121" />
+    <ImageTarget name="CapeCod-FortyPercentRFCapeCod-twentyeightOZ-0" size="0.100000 0.135539" />
+    <ImageTarget name="Hersheys-Reeses-OneAndHalfOz-5" size="0.100000 0.044320" />
+    <ImageTarget name="GeneralMills-NaturesValleyOatsNHoney-OneAndHalfOz-2" size="0.100000 0.046565" />
+    <ImageTarget name="Trident-OriginalGum-EighteenPack-0" size="0.100000 0.059264" />
+    <ImageTarget name="Wrigleys-OrbitPeppermint-FourteenPiece-3" size="0.100000 0.052666" />
+    <ImageTarget name="Nestle-Crunch-OneAndHalfOz-6" size="0.100000 0.035435" />
+    <ImageTarget name="Nestle-ButterfingerCups-OneAndHalfOz-5" size="0.100000 0.045313" />
+    <ImageTarget name="GeneralMills-TraditionalChexMix-TwoOz-1" size="0.100000 0.122912" />
+    <ImageTarget name="Kellogs-StrawberryPopTart-FourOz-8" size="0.100000 0.058646" />
+    <ImageTarget name="Kellogs-SpecialKChocPB-OneAndHalfOz-4" size="0.100000 0.030680" />
+    <ImageTarget name="Kellogs-RiceKrispiesTreats-TwoOz-5" size="0.100000 0.023768" />
+    <ImageTarget name="Kind-DarkChocNutsSeaSalt-OneOz-4" size="0.100000 0.028306" />
+    <ImageTarget name="Mendelez-FigNewton-TwoOz-5" size="0.100000 0.044397" />
+    <ImageTarget name="Wrigleys-Extra-SpearmintGum-0" size="0.100000 0.079306" />
+    <ImageTarget name="Kellogs-AppleCinn-NutriGrain-OneOz-3" size="0.100000 0.033068" />
+  </Tracking>
+</QCARConfig>
