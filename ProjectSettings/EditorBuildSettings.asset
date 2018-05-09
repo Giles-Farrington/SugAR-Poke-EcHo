@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SugAR Poke App scene.unity
-    guid: 48fab34eca1618c498e03a503a466a3a
+    path: Assets/EChOResources/Vending Machine Level Assets/VendingMachineLocal.unity
+    guid: 7739bf6a29ff54bb691813ce1a34b832

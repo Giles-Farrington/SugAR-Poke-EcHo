@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/SugAR Poke App scene.unity
+- path: Assets/EChOResources/Vending Machine Level Assets/VendingMachineLocal.unity
   isLoaded: 1
   isActive: 1

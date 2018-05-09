@@ -33,7 +33,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 	
 
     #endregion // PRIVATE_MEMBER_VARIABLES
-[]
+
     #region UNTIY_MONOBEHAVIOUR_METHODS
 
     protected virtual void Start()

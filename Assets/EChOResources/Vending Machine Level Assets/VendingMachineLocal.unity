@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   mTrackableName: Kellogs-AppleCinn-NutriGrain-OneOz-3
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.33068
   mImageTargetType: 0
@@ -323,7 +323,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Hersheys-Reeses-OneAndHalfOz-5Material
+  m_Name: FritoLay-BakedOriginal-OnePointTwoOz-2Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -336,7 +336,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: dbb1630d0d16401786be5ed2e3178e2e, type: 3}
+        m_Texture: {fileID: 2800000, guid: d6f254eb5327420eb4b82aaea927a5f8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -592,7 +592,7 @@ MonoBehaviour:
   mTrackableName: GeneralMills-TraditionalChexMix-TwoOz-1
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 1.2291199
   mImageTargetType: 0
@@ -848,7 +848,7 @@ MonoBehaviour:
   mTrackableName: Kellogs-RiceKrispiesTreats-TwoOz-5
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.23768
   mImageTargetType: 0
@@ -1456,7 +1456,7 @@ MonoBehaviour:
   mTrackableName: Nestle-ButterfingerCups-OneAndHalfOz-5
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.45313
   mImageTargetType: 0
@@ -1668,7 +1668,7 @@ MonoBehaviour:
   mTrackableName: Kellogs-SpecialKChocPB-OneAndHalfOz-4
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.3068
   mImageTargetType: 0
@@ -2187,7 +2187,7 @@ MonoBehaviour:
   mTrackableName: Kellogs-StrawberryPopTart-FourOz-8
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.58646
   mImageTargetType: 0
@@ -2571,7 +2571,7 @@ MonoBehaviour:
   mTrackableName: Wrigleys-Extra-SpearmintGum-0
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.79306
   mImageTargetType: 0
@@ -2694,7 +2694,7 @@ MonoBehaviour:
   mTrackableName: Kind-DarkChocNutsSeaSalt-OneOz-4
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.28305998
   mImageTargetType: 0
@@ -2812,7 +2812,7 @@ MonoBehaviour:
   mTrackableName: CliffBarAndCompany-ChocolateChipCliffBar-TwoPointFourOZ-TTL-4
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 1.90121
   mImageTargetType: 0
@@ -3026,7 +3026,7 @@ MonoBehaviour:
   mTrackableName: CapeCod-FortyPercentRFCapeCod-twentyeightOZ-0
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 1.35539
   mImageTargetType: 0
@@ -3335,7 +3335,7 @@ MonoBehaviour:
   m_Script: {fileID: -1826476478, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mWorldCenterMode: 3
+  mWorldCenterMode: 2
   mWorldCenter: {fileID: 0}
 --- !u!81 &1593325160
 AudioListener:
@@ -3571,7 +3571,7 @@ MonoBehaviour:
   mTrackableName: Wrigleys-OrbitPeppermint-FourteenPiece-3
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.52666
   mImageTargetType: 0
@@ -3689,7 +3689,7 @@ MonoBehaviour:
   mTrackableName: Nestle-Crunch-OneAndHalfOz-6
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.35434997
   mImageTargetType: 0
@@ -3812,7 +3812,7 @@ MonoBehaviour:
   mTrackableName: CliffAndCompany-ChocolateChipPeanutCrunch-TwoPointFourOZ-TTL-5
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 1.82952
   mImageTargetType: 0
@@ -3930,7 +3930,7 @@ MonoBehaviour:
   mTrackableName: FritoLay-BakedOriginal-OnePointTwoOz-2
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 1.57178
   mImageTargetType: 0
@@ -4134,7 +4134,7 @@ MonoBehaviour:
   mTrackableName: Mendelez-FigNewton-TwoOz-5
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.44397
   mImageTargetType: 0
@@ -4393,7 +4393,7 @@ MonoBehaviour:
   mTrackableName: Trident-OriginalGum-EighteenPack-0
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.59264
   mImageTargetType: 0
@@ -4518,7 +4518,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1906509469}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.53353894, y: 0.2607793, z: -0.028292038}
+  m_LocalPosition: {x: 0.53353894, y: 0.2607793, z: -0.009}
   m_LocalScale: {x: 0.04400002, y: 0.044, z: 0.04400002}
   m_Children: []
   m_Father: {fileID: 2141115685}
@@ -4949,7 +4949,7 @@ MonoBehaviour:
   mTrackableName: GeneralMills-NaturesValleyOatsNHoney-OneAndHalfOz-2
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.46565
   mImageTargetType: 0
@@ -5244,7 +5244,7 @@ MonoBehaviour:
   mTrackableName: Hersheys-Reeses-OneAndHalfOz-5
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/VendingMachine.xml
+  mDataSetPath: Vuforia/Local_VendingMachine.xml
   mExtendedTracking: 0
   mAspectRatio: 0.4432
   mImageTargetType: 0
