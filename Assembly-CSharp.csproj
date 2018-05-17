@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\EChOResources\FeedbackScript.cs" />
+     <Compile Include="Assets\EChOResources\Scripts\WebURLScript.cs" />
      <Compile Include="Assets\EChOResources\TeaspoonCounterContents\CounterScript.cs" />
      <Compile Include="Assets\FindTspNumEventHandler.cs" />
      <Compile Include="Assets\SimpleCloudHandler.cs" />
@@ -61,6 +62,7 @@
      <None Include="Assets\VuforiaFiles\StreamingAssets\VuforiaXmlFiles\VuforiaMars_ModelTarget.xml" />
      <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
+     <None Include="Assets\StreamingAssets\Vuforia\Test.xml" />
      <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\VendingMachine.xml" />
      <None Include="Assets\StreamingAssets\Vuforia\Sugar_poke.xml" />
