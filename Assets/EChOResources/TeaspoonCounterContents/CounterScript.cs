@@ -8,11 +8,26 @@ public class CounterScript : MonoBehaviour{
     // Use this for initialization
     public Material[] backgrounds = new Material[2];
 	public string fileName = "";
-
+	//
+	Quaternion rotation;
+	//
     /*The following function makes an empty string, and then loops through the file name until it finds the # of teaspoons. It then
     appends each digit of the number to the empty string. If name contains no numbers, the empty string it will be replaced with
     an error message.*/
 
+
+	//Get the original rotation values
+	void Awake() 
+	{
+		rotation = Quaternion.Euler(new Vector3(-90,0,0));
+	}
+
+	//fix rotation
+	void LateUpdate() 
+	{
+		transform.rotation = rotation;
+	}	
+	//
     public void GetTeaspoonValue(string fileName)
     {
         //Lines 12-14 get the TextMesh component and set the proper font size and font color
@@ -42,16 +57,19 @@ public class CounterScript : MonoBehaviour{
             finalOutput = "Error! \\n Teaspoon value not found!";
         }
 		//Debug.LogError ("Final output is " + finalOutput);
-        text_mesh.text = finalOutput;
+		text_mesh.text = finalOutput;
 
 		if (finalOutput == "0")
         {
-
             this.GetComponent<MeshRenderer>().material = backgrounds[0];
         }
         else
         {
             this.GetComponent<MeshRenderer>().material = backgrounds[1];
         }
+			
+			
     }
+
+
 }

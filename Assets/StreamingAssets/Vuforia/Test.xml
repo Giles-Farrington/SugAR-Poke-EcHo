@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="VeggieStix1oz-0g" size="0.200000 0.150000" />
+    <ImageTarget name="cheezit-0" size="0.050000 0.056689" />
+    <ImageTarget name="LennyAndLarrys-CompleteCookie-3" size="0.100000 0.080508" />
+    <ImageTarget name="SweetPotato-SweetChipotle-2" size="0.100000 0.100000" />
+    <ImageTarget name="GoodHealth-VeggieStix-0" size="0.100000 0.147445" />
+    <ImageTarget name="Lance-ToastCheeCrachers-RealPeanutButter-1" size="0.100000 0.100000" />
+    <ImageTarget name="PowerCrunchProteinEnergyBarOriginal-2" size="0.100000 0.100000" />
+    <ImageTarget name="Lance-ToastyPeanutButterCrackers-1" size="0.100000 0.100000" />
+    <ImageTarget name="Kirkland-TrailMix-5" size="0.100000 0.214170" />
+    <ImageTarget name="Trident-Green-0" size="0.100000 0.062519" />
+    <ImageTarget name="NatureValley-PeanutButterDarkChocolate-2" size="0.100000 0.100000" />
+    <ImageTarget name="GoodHealth-KettleChips-AvocadoOil-Barbecue-0" size="0.100000 0.100000" />
+    <ImageTarget name="Popcorners-WhiteCheddar-1" size="0.100000 0.147041" />
+    <ImageTarget name="Kars-AllEnergyTrailMix-Unsalted-4" size="0.100000 0.162460" />
+    <ImageTarget name="GoodHealth-VeggieStix-SeaSalt-0" size="0.100000 0.145404" />
+    <ImageTarget name="OatmegaCookie-PeanutButter-4" size="0.100000 0.075397" />
+    <ImageTarget name="PromaxProteinBar-DoubleFudgeBrownie-7" size="0.100000 0.033573" />
+    <ImageTarget name="ClifBar-WhiteChocolateMacadamiaNut-6" size="0.100000 0.162835" />
+    <ImageTarget name="bai-antioxidantcocofusion-eighteenOZ-1" size="0.100000 0.209633" />
+    <ImageTarget name="bai-antioxidantcocofusion-eighteenOZ-Side-1" size="0.100000 0.178864" />
+    <ImageTarget name="PiratesBooty-3" size="0.050000 0.064394" />
+    <ImageTarget name="PopCornersKettleCorn-5" size="0.100000 0.100000" />
+    <ImageTarget name="Chobani-A-hint-of-Alphonso-Mango-5" size="0.200000 0.137740" />
+    <ImageTarget name="Chobani-A-hint-of-Monterey-Strawberry-10" size="0.200000 0.127978" />
+    <ImageTarget name="Yogurt-Chobani-Non-Fat-Milk-Plain-150g-0" size="3.000000 1.869369" />
   </Tracking>
 </QCARConfig>

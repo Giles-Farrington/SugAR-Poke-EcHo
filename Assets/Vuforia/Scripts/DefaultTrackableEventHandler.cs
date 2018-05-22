@@ -15,6 +15,8 @@ Confidential and Proprietary - Protected under copyright and other laws.
 
 using UnityEngine;
 using Vuforia;
+using UnityEngine.UI;
+
 
 /// <summary>
 ///     A custom handler that implements the ITrackableEventHandler interface.
@@ -29,7 +31,11 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 	private string imgTargetName = " ";					//String that is consistently set to current image target name
 	private double distance = 0.4;						//Value consistently updated with current distance 
 	private double[] prevDist = new double[4];			//Used for determining whether or not distance is same multiple frames in a row within OnTrackableStateChanged method
-	private int count = 0;								//Keeps track of prevDist current array value
+	private int count = 0;
+	Text text_mesh_label;
+
+
+	//Keeps track of prevDist current array value
 	
 
     #endregion // PRIVATE_MEMBER_VARIABLES
@@ -38,7 +44,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected virtual void Start()
     {
-		
+		text_mesh_label = GameObject.Find ("Text").GetComponent<Text> ();
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
 		mStatus = TrackableBehaviour.Status.DETECTED;		//mStatus initialized as DETECTED so first image target may be found
 		nStatus = TrackableBehaviour.Status.NOT_FOUND;		//nStatus initialized as NOT_FOUND and never changes, since previousStatus doesn't really matter when finding new image target
@@ -46,6 +52,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
     }
 	protected virtual void Update(){
+		
 		Vector3 delta = Camera.main.transform.position - mTrackableBehaviour.transform.position; //Gets updated current image target distance every update frame
 		distance = delta.magnitude;
 		Debug.Log("DISTANCE: " + distance);
@@ -89,7 +96,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
 			imgTargetName = mTrackableBehaviour.TrackableName;			//Gets current image target name 
 			transform.Find("TeaspoonCounter 2 1").GetComponent<CounterScript>().GetTeaspoonValue(imgTargetName);	//Calls teaspoon counter script to get added sugar info
-            OnTrackingFound();				//OnTrackingFound() is called in order to display added sugar info on screen and tracks current image target
+			OnTrackingFound();				//OnTrackingFound() is called in order to display added sugar info on screen and tracks current image target
 			
 			//Next 8 lines specifically written to determine whether or not image target left screen by checking to see if distance is exactly the same for multiple frames in a row.
 			prevDist[count] = distance;				//Sets prevDist of current count to current distance 	
@@ -109,7 +116,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 			count = 0;				//count reset to 0
 			//transform.Find("CloudRecognition").GetComponent<SimpleCloudHandler>().Reset();  //UNCOMMENT this line if using cloud database (WARNING: I HAVE NOT TESTED cloud database since script was rewritten so may not work or receive errors)
-            OnTrackingLost();		//Removes added sugar value from screen and drops tracking of current image target
+			OnTrackingLost();		//Removes added sugar value from screen and drops tracking of current image target
         }
         else
         {
@@ -132,7 +139,6 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
-
         // Enable rendering:
         foreach (var component in rendererComponents)
             component.enabled = true;
@@ -140,10 +146,27 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Enable colliders:
         foreach (var component in colliderComponents)
             component.enabled = true;
-
+		
         // Enable canvas':
         foreach (var component in canvasComponents)
             component.enabled = true;
+
+
+
+
+		//text_mesh_label.text = "NONE";
+
+		//check products and look for types of sugar: inaccurate data, need to be updated
+		switch (imgTargetName) {
+
+		case "CapeCod-FortyPercentRFCapeCod-twentyeightOZ-0":
+			text_mesh_label.text = "1. Agave nectar" + "\n" + "2. Agave syrup" + "\n" + "3. Allulose" + "\n" + "4. Barbados sugar" + "\n" + "5. Beet syrup" + "\n" + "6. Syrup" + "\n" + "7. White sugar";
+			break;
+		case "Hersheys-Reeses-OneAndHalfOz-5":
+			text_mesh_label.text = "None";
+			break;
+		}
+
     }
 
 
@@ -164,6 +187,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Disable canvas':
         foreach (var component in canvasComponents)
             component.enabled = false;
+
+
     }
 	
 	protected virtual void OnTrackingLostTwo(){		//Stops tracking and displaying added sugar values without messing with OnTrackableStateChanged method (Called outside of the OnTrackableStateChanged method)
@@ -182,7 +207,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Disable canvas':
         foreach (var component in canvasComponents)
             component.enabled = false;
+
 	}
 
     #endregion // PRIVATE_METHODS
+
+
 }
