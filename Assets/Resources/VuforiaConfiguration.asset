@@ -44,9 +44,11 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
+    - Mayor-Demo
     - Test
     - Local_VendingMachine
     dataSetsToActivate:
+    - Mayor-Demo
     - Test
     - Local_VendingMachine
   videoBackground:
