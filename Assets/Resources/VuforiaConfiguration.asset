@@ -13,12 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vuforia:
     vuforiaLicenseKey: AcaKfnr/////AAAAmS03yX+ytEnjhXiRkJviXyFiwQEpwoRkzOVEaIvmOIZIj7wTUC2R6DljOtvaPFW1RqtWQTW9LQ4JELhuobFW2ukTP7V4n0Vo8BRtNKDw1Vk5RWK0ATGvUyWrfWY2V59KKKewVWBdJXjTmKtzxEwI8Fl93Y8vu6XtMAt5kYxSp6VPUX9BMWoY0S/BkzyXvlbWJcPYQ1PN+RjeVVN4y9IB/+oKb8XHxMnp9NrVv8mHnioyyXTFUfeSlr490TpscvQ4fOYAwFJVDhg6oI6jUkA6WE6Sf45Hhaw8oFPSwnrpVvilHVw27Qww+hzQJQwz0moiAVaABK6GuSnid4gvguuncJW2B7TyiPjioj4Ts5nXD9pg
-    ufoLicenseKey: QWRlZHhyei8vLy8vQUFBQUtMalBvV21lSkVxR3Vac1FZa09DS0RJMnBKbHRzbWkzQTIvZDdVYksyL0hnTy9RbDR5cm5ZTFpsVit6aWl4KzV1RXdoYzkxRG0rTE1WaE0yZXpOaVBjRTRKMExwaFdxVGFBRVpyOUQ0YzJDZmMwUFk0WHBZbkdkSTIwaHhMVEM1Y2lKTUtDd0tEUDJkNnhwSjRWcGF4VzZBZ0RITk1ScXFMbktyYWJLRFN2dzA0dG94cXNnTlhCUmZaZGlBOWtZd3JRdWYyUmZzVUdBazR1REhwK3p4ZmRpV1Z2NmNHa2ZoaFM2UE1VTGJCUVBobVg3OEI1WjlUT0pwb012cDZNV0s4VWVnTWlkb0hZSDJ1dTU3bnNQcjRTcERUU2RiL0JmSUJTRHpzRFNucS8rN3AvV1ZnZEl5QjlWZS94MmJFaWxyeTBNYTVQY2s5TCtJS0xORDdOOGdHZkdFY2lZWlNPcGNEYzJOU3VpNmNpbng=
+    ufoLicenseKey: QVlBN0lpei8vLy8vQUFBQ0tGY1kxT2E5UTBrTWd5c2Q3UHgvNUkxSjJMbjFCSzNsY2pya0dKNk5uZDVqeUk2aHpBaFIzVXFBam5UNS9GdEJqZjJFRVJtNEsyNlJwQzVHLzFNUFA2eElLbk5handqbWJ5cEtXUmROa2ZsUVZxYVlGRzdQeURZWW81NmtaaU0xUURremhXL0xFaGZaZmdDdUswTlBZVzhscVJmK291eVB4WVdhWFd5R2htdnpoZFJkY3FKZmVPTlVSbUthMlY0UWh5STlXK2xXamR6TW5vRWhYM2NnR1Q5K2hrbmFEZ1pPYVd0Z0dleERHZmJKeW9pSHVDcGxYOFpCSk9tVWZVdHFYWjhKUi9rS1pVZnRscXVGT0V6b2d1MFpKaVVmdUd1cFRLRmtZUjJhUjBvZWZIS2ZKNFhqSVh3Y0k0bk8rYjNlTVVOaGFmbXJMcjl1RjVvdWI4TkpkNjNIeWhGbEY5eC9nNEhKcDdlY0RUZjg=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
     maxSimultaneousImageTargets: 1
     maxSimultaneousObjectTargets: 1
-    useDelayedLoadingObjectTargets: 1
+    useDelayedLoadingObjectTargets: 0
     cameraDirection: 0
     mirrorVideoBackground: 0
   digitalEyewear:
@@ -44,9 +44,13 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
-    - VendingMachine
+    - Mayor-Demo
+    - Test
+    - Local_VendingMachine
     dataSetsToActivate:
-    - VendingMachine
+    - Mayor-Demo
+    - Test
+    - Local_VendingMachine
   videoBackground:
     clippingMode: 0
     numDivisions: 2
@@ -55,9 +59,9 @@ MonoBehaviour:
     matteShader: {fileID: 15310, guid: 0000000000000000f000000000000000, type: 0}
     videoBackgroundEnabled: 1
   deviceTracker:
-    autoInitTracker: 1
-    autoStartTracker: 1
-    trackingMode: 1
+    autoInitTracker: 0
+    autoStartTracker: 0
+    trackingMode: 0
     posePrediction: 0
     modelCorrectionMode: 0
     modelTransformEnabled: 0
