@@ -160,10 +160,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 		switch (imgTargetName) {
 
 		case "CapeCod-FortyPercentRFCapeCod-twentyeightOZ-0":
-			text_mesh_label.text = "1. Agave nectar" + "\n" + "2. Agave syrup" + "\n" + "3. Allulose" + "\n" + "4. Barbados sugar" + "\n" + "5. Beet syrup" + "\n" + "6. Syrup" + "\n" + "7. White sugar";
+			//text_mesh_label.text = "1. Agave nectar" + "\n" + "2. Agave syrup" + "\n" + "3. Allulose" + "\n" + "4. Barbados sugar" + "\n" + "5. Beet syrup" + "\n" + "6. Syrup" + "\n" + "7. White sugar";
 			break;
 		case "Hersheys-Reeses-OneAndHalfOz-5":
-			text_mesh_label.text = "None";
+			//text_mesh_label.text = "None";
 			break;
 		}
 

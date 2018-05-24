@@ -69,6 +69,7 @@
      <None Include="Assets\StreamingAssets\Vuforia\VendingMachine.xml" />
      <None Include="Assets\StreamingAssets\Vuforia\Sugar_poke.xml" />
      <None Include="Assets\VuforiaFiles\StreamingAssets\VuforiaXmlFiles\VuforiaMars_Object_OT.xml" />
+     <None Include="Assets\StreamingAssets\Vuforia\Mayor-Demo.xml" />
      <None Include="Assets\StreamingAssets\Vuforia\Test.xml" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
      <None Include="Assets\VuforiaFiles\StreamingAssets\VuforiaXmlFiles\VuforiaMars_Images.xml" />
