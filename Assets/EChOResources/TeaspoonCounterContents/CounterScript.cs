@@ -30,7 +30,7 @@ public class CounterScript : MonoBehaviour{
 	//
     public void GetTeaspoonValue(string fileName)
     {
-        //Lines 12-14 get the TextMesh component and set the proper font size and font color
+        //Lines get the TextMesh component and set the proper font size and font color
         TextMesh text_mesh = this.GetComponentInChildren<TextMesh>();
         text_mesh.color = new Vector4(1, 1, 1, 1);
         text_mesh.fontSize = 200;
@@ -67,6 +67,14 @@ public class CounterScript : MonoBehaviour{
         {
             this.GetComponent<MeshRenderer>().material = backgrounds[1];
         }
+
+
+		//position for text of the number of teaspoon
+		if (int.Parse (text_mesh.text) < 10) {
+			this.gameObject.transform.GetChild (0).localPosition = new Vector3 (-1.59f, 0f, 4.1f); 
+		} else {
+			this.gameObject.transform.GetChild (0).localPosition = new Vector3 (-3.5f, 0f, 3.9f); 
+		}
 			
 			
     }

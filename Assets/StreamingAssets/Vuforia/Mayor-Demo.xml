@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="Paleonola-GranolaChocolateFix-TenOz-10" size="0.100000 0.174482" />
+    <ImageTarget name="Paleonola-GranolaMaplePancake-NinePointNineOz-8" size="0.100000 0.174863" />
+    <ImageTarget name="Paleonola-GranolaOriginal-NinePointNineOz-10" size="0.100000 0.168776" />
+    <ImageTarget name="GrandyOats-Granola-Classic-8" size="0.100000 0.158746" />
+    <ImageTarget name="GrandyOats-Granola-CoconutFruit-11" size="0.100000 0.156352" />
+    <ImageTarget name="NaturePath-Granola-PeanutButterGranola-11" size="0.100000 0.124675" />
+    <ImageTarget name="PurelyElizabeth-Granola-PumpkinCinnamonAncientGrainGranola-17" size="0.100000 0.154440" />
+    <ImageTarget name="PurelyElizabeth-Granola-CranberryPecanAncientGrainGranola-17" size="0.100000 0.173684" />
+    <ImageTarget name="Paleonola-Granola-PinaColada-13" size="0.100000 0.170778" />
+    <ImageTarget name="Paleonola-Granola-ApplePie-13" size="0.100000 0.173455" />
+    <ImageTarget name="NaturesPath-Granola-HempHeartsGranola-14" size="0.100000 0.124138" />
+    <ImageTarget name="BearNaked-Granola-FruitNut12oz-19" size="0.100000 0.172802" />
+    <ImageTarget name="MountainRise-GranolaVegan-ThirteenPointFourOz-6" size="0.100000 0.159517" />
     <ImageTarget name="MountainRise-GranolaMonkeyBusiness-ThirteenPointFourOz-18" size="0.100000 0.156358" />
     <ImageTarget name="WegmansOrganic-GranolaVanillaAndAlmonds-TwelveOz-22" size="0.100000 0.179372" />
     <ImageTarget name="WegmansOrganic-GranolaPumpkinFlax-TwelveOz-17" size="0.100000 0.169671" />
@@ -8,9 +21,6 @@
     <ImageTarget name="WegmansOrganic-GranolaCocoaAndChia-TwelveOz-20" size="0.100000 0.172786" />
     <ImageTarget name="WegmansOrganic-GranolaBlueberryAndFlax-TwelveOz-22" size="0.100000 0.180180" />
     <ImageTarget name="WegmansOrganic-GranolaAncientGrain-TwelveOz-17" size="0.100000 0.169312" />
-    <ImageTarget name="Paleonola-GranolaOriginal-NinePointNineOz-17" size="0.100000 0.168776" />
-    <ImageTarget name="Paleonola-GranolaMaplePancake-NinePointNineOz-18" size="0.100000 0.174863" />
-    <ImageTarget name="Paleonola-GranolaChocolateFix-TenOz-17" size="0.100000 0.174482" />
     <ImageTarget name="NatureValley-ProteinPeanutButterGranola-ElevenPointSevenOz-21" size="0.100000 0.155794" />
     <ImageTarget name="NatureValley-ProteinGranolaCranberryAlmond-ElevenOz-21" size="0.100000 0.177187" />
     <ImageTarget name="NatureValley-GranolaProteinOatsnDarkChocolate-TenPointSixOz-21" size="0.100000 0.162767" />
@@ -18,7 +28,6 @@
     <ImageTarget name="NatureValley-GranolaGranolaCrunchOatsnHoney-SixteenPointTwoOz-30" size="0.100000 0.138408" />
     <ImageTarget name="NaturesPath-GranolaVanillaAlmondPlusFlaxGranola-TwelveOz-12" size="0.100000 0.119250" />
     <ImageTarget name="NaturesPath-GranolaPumpkinSeedPlusFlaxGranola-TwelveOz-14" size="0.100000 0.133333" />
-    <ImageTarget name="MountainRise-GranolaVegan-ThirteenPointFourOz-6" size="0.100000 0.159521" />
     <ImageTarget name="MountainRise-GranolaOriginal-ThirteenPointFourOz-16" size="0.100000 0.162437" />
     <ImageTarget name="MountainRise-GranolaChunkyCocoa-ThirteenPointFourOz-16" size="0.100000 0.159204" />
     <ImageTarget name="GoRawOrganicLive-GranolaRaisinCrunch-SixteenOz-0" size="0.100000 0.159204" />

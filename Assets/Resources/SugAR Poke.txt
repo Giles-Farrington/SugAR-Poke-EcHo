@@ -1,0 +1,40 @@
+ID	Product Name	Database	Image Target	Total Weight (g)	Total Sugar (g)	Added Sugar (g)	Types of Sugar									
+1	Hershey Reeses	Local_VendingMachin	Hersheys-Reeses-OneAndHalfOz-5	42	22	20	"Sugar, Corn syrup, Dextrose"									
+2	Wrigleys Orbit Peppermint	Local_VendingMachin	Wrigleys-OrbitPeppermint-FourteenPiece-3	21	14	14	sugar alcohol (glycerol)									
+3	Nestle Crunch	Local_VendingMachin	Nestle-Crunch-OneAndHalfOz-6	1.55	24	24	"Sugar, Barley Malt"									
+4	Nestle Butterfinger Peanut Butter Cups	Local_VendingMachin	Nestle-ButterfingerCups-OneAndHalfOz-5	42.5	22	22	"Sugar, Corn syrup, Dextrose, Lactose"									
+5	General Mills Chex Mix Traditional	Local_VendingMachin	GeneralMills-TraditionalChexMix-TwoOz-1	50	3	3	"Sugar, Maltodextrin, Dextrose,?Malt syrup"									
+6	Kellogs Strawberry Pop Tart	Local_VendingMachin	Kellogs-StrawberryPopTart-FourOz-8	104	33	16	"Corn syrup, High fructose corn syrup, Dextrose, Sugar"									
+7	Kind Dark Chocolate Nuts And Sea Salt	Local_VendingMachin	Kind-DarkChocNutsSeaSalt-OneOz-4	40	5	4	"Sugar, Honey, Glucose syrup"									
+8	Hershey Kit Kat	Local_VendingMachin	Hershey-BigKitKat-OneAndHalfOz-5	42	24	21	"Sugar, Lactose"									
+9	Kars All Energy Trail Mix	Test	Kars-AllEnergyTrailMix-Unsalted-4	57	14	4	"Sugar, Dextrose"									
+10	Bakery on Main Granola Organic Happy Muesli Blueberry	Major-Demo	BakeryOnMain-GranolaOrganicHappyMuesliBlueberry-FourteenOz-2	400	8	8	Organic cane sugar									
+11	Bakery on Main Granola Organic Super Seed with Sprouted Chia Happy Muesli	Major-Demo	BakeryOnMain-SuperSeedWithSproutedChiaHappyMuesli-FourteenOz-0	397	16	0										
+12	Bakery on Main Granola Fiber Power Triple Berry	Major-Demo	BakeryOnMain-GranolaFiberPowerTripleBerry-TwelveOz-11	340	42	0	"Honey, Brown rice syrup"									
+13	Bakery on Main Granola Fiber Power Cinnamon Raisin	Major-Demo	BakeryOnMain-GranolaFiberPowerCinnamonRaisin-TwelveOz-14	340	54	0	"Honey, Brown rice syrup"									
+14	Go Raw Organic Live Granola Granola Raisin Crunch	Major-Demo	GoRawOrganicLive-GranolaRaisinCrunch-SixteenOz-0	454	104	0										
+15	Go Raw Organic Live Granola Coco Crunch	Major-Demo	GoRawOrganicLive-GranolaCocoCrunch-SixteenOz-0	454	144	0										
+16	Bear Naked Granola Original Cinnamon Granola	Major-Demo	BearNaked-GranolaOriginalCinnamonGranola-ElevenPointTwoOz-15	317	60	60	"Honey, Sugar"									
+17	Bear Naked Granola Vnilla Almond Granola	Major-Demo	BearNaked-GranolaVnillaAlmondGranola-TwelveOz-11	340	44	44										
+18	Bear Naked Granola Honey Almond Granola	Major-Demo	BearNaked-GranolaHoneyAlmondGranola-ElevenOz-13	317	50	50	Honey									
+19	Natures Path Granola Vanilla Almond Plus Flax Granola	Major-Demo	NaturesPath-GranolaVanillaAlmondPlusFlaxGranola-TwelveOz-12	325	60	48	"Evaporated cane juice, Molasses"									
+20	Natures Path Granola Pumpkin Seed Plus Flax Granola	Major-Demo	NaturesPath-GranolaPumpkinSeedPlusFlaxGranola-TwelveOz-14	325	60	54	"Evaporated cane juice, Molasses"									
+21	Bakery on Main Granola Extreme Nut And Fruit	Major-Demo	BakeryOnMain-GranolaExtremeNutAndFruit-ElevenOz-13	312	60	50	"Cane sugar, Caramelized pear juice concentrate, Invert cane sugar"									
+22	Mountain Rise Granola Original	Major-Demo	MountainRise-GranolaOriginal-ThirteenPointFourOz-16	378	63	63	Organic cane sugar									
+23	Mountain Rise Granola Chunky Cocoa	Major-Demo	MountainRise-GranolaChunkyCocoa-ThirteenPointFourOz-16	378	63	63	Organic cane sugar									
+24	Mountain Rise Granola Monkey Business	Major-Demo	MountainRise-GranolaMonkeyBusiness-ThirteenPointFourOz-18	378	70	70	Organic cane sugar									
+25	Mountain Rise Granola Vegan	Major-Demo	MountainRise-GranolaVegan-ThirteenPointFourOz-6	378	21	21	Organic cane sugar									
+26	Paleonola Granola Original	Major-Demo	Paleonola-GranolaOriginal-NinePointNineOz-17	283	67	67	"Honey, Apple juice concentrate"									
+27	Paleonola Granola Chocolate Fix	Major-Demo	Paleonola-GranolaChocolateFix-TenOz-17	283	67	67	"Honey, Apple juice concentrate"									
+28	Paleonola Granola Maple Pancake	Major-Demo	Paleonola-GranolaMaplePancake-NinePointNineOz-18	283	71	71	Honey									
+29	Nature Valley Granola Protein Oatsn Honey	Major-Demo	NatureValley-GranolaOatsnHoney-ElevenOz-18	311	72	72	"sugar, refiner's syrup, honey"									
+30	Nature Valley Granola Protein Peanut Butter Granola	Major-Demo	NatureValley-ProteinPeanutButterGranola-ElevenPointSevenOz-21	330	84	84	"sugar, dextrose, refiner's syrup, honey"									
+31	Nature Valley Granola Protein Oatsn Dark Chocolate	Major-Demo	NatureValley-GranolaProteinOatsnDarkChocolate-TenPointSixOz-21	300	84	84	"sugar, refiner's syrup, tapioca syrup"									
+32	Nature Valley Granola Protein Cranberry Almond	Major-Demo	NatureValley-ProteinGranolaCranberryAlmond-ElevenOz-21	306	84	84	"sugar, refiner's syrup, tapioca syrup"									
+33	Nature Valley Granola Granola Crunch Oatsn Honey	Major-Demo	NatureValley-GranolaGranolaCrunchOatsnHoney-SixteenPointTwoOz-30	459	119	119	"sugar, honey, brown sugar syrup"									
+34	Wegmans Granola Vanilla And Almonds	Major-Demo	WegmansOrganic-GranolaVanillaAndAlmonds-TwelveOz-22	330	88	88	"organic milled cane sugar, organic honey, organic barley malt syrup"									
+35	Wegmans Granola Blueberry And Flax	Major-Demo	WegmansOrganic-GranolaBlueberryAndFlax-TwelveOz-22	330	88	88	"organic milled cane sugar, organic honey, organic barley malt syrup"									
+36	Wegmans Granola Ancient Grain	Major-Demo	WegmansOrganic-GranolaAncientGrain-TwelveOz-17	330	66	66	"organic milled cane sugar, organic molasses"									
+37	Wegmans Granola Pumpkin Flax	Major-Demo	WegmansOrganic-GranolaPumpkinFlax-TwelveOz-17	330	66	66	"organic milled cane sugar, organic molasses"									
+38	Wegmans Granola Coconut And Baobab	Major-Demo	WegmansOrganic-GranolaCoconutAndBaobab-TwelveOz-20	330	77	77	"organic milled cane sugar, organic honey, organic baobab fruit powder, organic barley malt syrup"									
+39	Wegmans Granola Cocoa And Chia	Major-Demo	WegmansOrganic-GranolaCocoaAndChia-TwelveOz-20	330	77	77	"organic milled cane sugar, organic cocoa, organic barley malt syrup"									

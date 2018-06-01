@@ -16,6 +16,11 @@ Confidential and Proprietary - Protected under copyright and other laws.
 using UnityEngine;
 using Vuforia;
 using UnityEngine.UI;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+
+
 
 
 /// <summary>
@@ -32,7 +37,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 	private double distance = 0.4;						//Value consistently updated with current distance 
 	private double[] prevDist = new double[4];			//Used for determining whether or not distance is same multiple frames in a row within OnTrackableStateChanged method
 	private int count = 0;
-	Text text_mesh_label;
+
+	//Text text_mesh_label;
 
 
 	//Keeps track of prevDist current array value
@@ -44,12 +50,13 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected virtual void Start()
     {
-		text_mesh_label = GameObject.Find ("Text").GetComponent<Text> ();
+		//text_mesh_label = GameObject.Find ("Text").GetComponent<Text> ();
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
 		mStatus = TrackableBehaviour.Status.DETECTED;		//mStatus initialized as DETECTED so first image target may be found
 		nStatus = TrackableBehaviour.Status.NOT_FOUND;		//nStatus initialized as NOT_FOUND and never changes, since previousStatus doesn't really matter when finding new image target
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
+	
     }
 	protected virtual void Update(){
 		
@@ -152,20 +159,31 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             component.enabled = true;
 
 
-
-
-		//text_mesh_label.text = "NONE";
-
-		//check products and look for types of sugar: inaccurate data, need to be updated
-		switch (imgTargetName) {
-
-		case "CapeCod-FortyPercentRFCapeCod-twentyeightOZ-0":
-			//text_mesh_label.text = "1. Agave nectar" + "\n" + "2. Agave syrup" + "\n" + "3. Allulose" + "\n" + "4. Barbados sugar" + "\n" + "5. Beet syrup" + "\n" + "6. Syrup" + "\n" + "7. White sugar";
-			break;
-		case "Hersheys-Reeses-OneAndHalfOz-5":
-			//text_mesh_label.text = "None";
-			break;
+		//Read "Sugar Poke.txt" and retrieve sugar ingredients for the tracked product
+		/*TextAsset txt = (TextAsset)Resources.Load("Sugar Poke", typeof(TextAsset));
+		List<string> productName = new List<string> ();
+		List<string> sugarIngredients = new List<string> ();
+		List<string> targets = new List<string> ();
+		string content = txt.text;
+		string[] product = content.Split (new char[] { '\n' });
+		for (int i = 0; i < product.Length - 1; i++) {
+			string[] itemInProduct = product [i].Split (new char[]{ '\t' });
+			productName.Add (itemInProduct [1]);
+			targets.Add (itemInProduct [3]);
+			sugarIngredients.Add (itemInProduct [7]);
 		}
+
+		//ckeck if the tracked product exists in the list
+		if (targets.Contains(imgTargetName)) {
+			text_mesh_label.text = sugarIngredients[targets.IndexOf (imgTargetName)];
+		}
+		*/
+
+
+		//text_mesh_label.text = sugarIngredients[targets.IndexOf (imgTargetName)];
+
+		//
+
 
     }
 
@@ -187,7 +205,6 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Disable canvas':
         foreach (var component in canvasComponents)
             component.enabled = false;
-
 
     }
 	

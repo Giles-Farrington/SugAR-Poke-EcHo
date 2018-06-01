@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33130238806346924}
   - component: {fileID: 23464920063354562}
   - component: {fileID: 114159782357889016}
+  - component: {fileID: 95966588333107454}
   m_Layer: 0
   m_Name: TeaspoonCounter 2 1
   m_TagString: Untagged
@@ -53,8 +54,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721659707282888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07, y: 0.97406, z: -0.354}
-  m_LocalScale: {x: 0.041051555, y: 0.041051526, z: 0.041051526}
+  m_LocalPosition: {x: 0.241, y: 0.974, z: 0.419}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_Children:
   - {fileID: 4387379097987726}
   m_Father: {fileID: 0}
@@ -67,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1919501471893814}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.6, y: -0, z: 5}
+  m_LocalPosition: {x: -2, y: -0, z: 5}
   m_LocalScale: {x: 0.3051107, y: 0.3051104, z: 0.3051104}
   m_Children: []
   m_Father: {fileID: 4256343726509578}
@@ -87,7 +88,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 614f8e4afb9639e48bddb55630e605ad, type: 3}
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -148,6 +149,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721659707282888}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &95966588333107454
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1721659707282888}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 51c30d6c19e62441b822a596eaf7bffa, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!102 &102261243039032718
 TextMesh:
   serializedVersion: 3
@@ -183,5 +201,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgrounds:
-  - {fileID: 2100000, guid: 837b9e4e8f3a67b47b7b1df7bcaecc30, type: 2}
-  - {fileID: 2100000, guid: faac66809d161cc4785fe0b8f7dba3cd, type: 2}
+  - {fileID: 2100000, guid: 4b5840c844b92471288d0615672b0f2d, type: 2}
+  - {fileID: 2100000, guid: 5924567cacad948da805cca356c5bd4a, type: 2}
+  fileName: 
