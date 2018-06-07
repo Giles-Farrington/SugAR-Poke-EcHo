@@ -44,15 +44,9 @@ MonoBehaviour:
       ContainsMagnet: 0
   databaseLoad:
     dataSetsToLoad:
-    - Local_SaladDressings_Yogurts
-    - Mayor-Demo
-    - Test
-    - Local_VendingMachine
+    - SugAR_Poke_v1_33
     dataSetsToActivate:
-    - Local_SaladDressings_Yogurts
-    - Mayor-Demo
-    - Test
-    - Local_VendingMachine
+    - SugAR_Poke_v1_33
   videoBackground:
     clippingMode: 0
     numDivisions: 2

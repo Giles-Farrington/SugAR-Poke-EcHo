@@ -34,8 +34,8 @@ public class TemporaryUIScript : MonoBehaviour {
             //Transform tsp = Instantiate(replacer, child).transform;
             //tsp.name = "TeaspoonCounter 2 1";
 
-            Transform tsp = child.FindChild("TeaspoonCounter 2 1");
-            tsp.localPosition = new Vector3(.45f, .05f, 0f);
+            Transform tsp = child.Find("TeaspoonCounter 2 1");
+			tsp.localPosition = new Vector3(.086f, -.031f, -.007f);
             
         }
         x = 2;

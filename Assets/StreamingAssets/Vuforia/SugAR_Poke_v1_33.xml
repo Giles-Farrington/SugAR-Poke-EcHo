@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Paleonola-GranolaMaplePancake-283g-8" size="0.100000 0.085938" />
+    <ImageTarget name="Paleonola-GranolaTheOriginal-283g-10" size="0.100000 0.078542" />
+    <ImageTarget name="Wegmans-GranolaPumpkinFlax-340-17" size="0.100000 0.140841" />
+    <ImageTarget name="NewmansOwn-DressingLightItalian-16floz-0" size="0.100000 0.166335" />
+    <ImageTarget name="WishBone-DressingTheOriginalWestern-16floz-44" size="0.100000 0.150336" />
+    <ImageTarget name="WishBone-DressingRedWineVinaigrette-16floz-4" size="0.100000 0.155970" />
+    <ImageTarget name="WishBone-DressingRanch-16floz-4" size="0.100000 0.169718" />
+    <ImageTarget name="WishBone-DressingLightWestern-16floz-48" size="0.100000 0.157554" />
+    <ImageTarget name="WishBone-DressingItalian-16floz-16" size="0.100000 0.182090" />
+    <ImageTarget name="NewmansOwn-DressingLiteItalian-16floz-0" size="0.100000 0.141447" />
+    <ImageTarget name="Paleonola-GranolaApplePie-283g-8" size="0.100000 0.089140" />
+    <ImageTarget name="Paleonola-GranolaChocolateFix-283g-10" size="0.100000 0.077460" />
+    <ImageTarget name="Paleonola-GranolaPinaColada-283g-8" size="0.100000 0.092437" />
+    <ImageTarget name="HiddenValley-DressingTheOriginalRanch-16floz-4" size="0.100000 0.058475" />
+    <ImageTarget name="HiddenValley-DressingTheOriginalRanchFatFree-16floz-12" size="0.100000 0.062355" />
+    <ImageTarget name="HiddenValley-DressingColeslaw-16floz-16" size="0.100000 0.133333" />
+    <ImageTarget name="Wegmans-GranolaVanillaAndAlmonds-330g-22" size="0.100000 0.179775" />
+    <ImageTarget name="Wegmans-GranolaCoconutBaobab-340g-20" size="0.100000 0.178771" />
+    <ImageTarget name="Wegmans-GranolaCocoaAndChia-340g-20" size="0.100000 0.172973" />
+    <ImageTarget name="Wegmans-GranolaBlueberryAndFlax-330g-22" size="0.100000 0.180791" />
+    <ImageTarget name="Wegmans-GranolaAncientGrain-340g-17" size="0.100000 0.169312" />
+    <ImageTarget name="NaturesPath-GranolaPeanutButterGranola-326g-11" size="0.100000 0.124675" />
+    <ImageTarget name="NaturesPath-GranolaFlaxPluxPumpkinSeedsGranola-325g-14" size="0.100000 0.129833" />
+    <ImageTarget name="NaturesPath-GranolaFlaxPlusVanillaAlmondGranola-325g-12" size="0.100000 0.119215" />
+    <ImageTarget name="Kraft-DressingZestyItalian-16floz-8" size="0.100000 0.156098" />
+    <ImageTarget name="Kraft-DressingFatFreeClassicRanch-16floz-12" size="0.100000 0.173913" />
+    <ImageTarget name="Kraft-DressingColeslaw-16floz-36" size="0.100000 0.164948" />
+    <ImageTarget name="Kraft-DressingClassicRanch-16floz-8" size="0.100000 0.183908" />
+    <ImageTarget name="Kraft-DressingClassicCatalina-16oz-32" size="0.100000 0.161616" />
+    <ImageTarget name="GrandyOats-GranolaOrganicClassic-340g-8" size="0.100000 0.158746" />
+    <ImageTarget name="GrandyOats-GranolaGlutenFreeCoconutPlusFruitGranola-340g-11" size="0.100000 0.156352" />
+    <ImageTarget name="GoRaw-GranolaRaisinCrunch-454g-0" size="0.100000 0.159204" />
+    <ImageTarget name="GoRaw-GranolaCocoCrunch-453g-0" size="0.100000 0.175824" />
+  </Tracking>
+</QCARConfig>

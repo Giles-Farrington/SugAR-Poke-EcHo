@@ -62,7 +62,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 		
 		Vector3 delta = Camera.main.transform.position - mTrackableBehaviour.transform.position; //Gets updated current image target distance every update frame
 		distance = delta.magnitude;
-		Debug.Log("DISTANCE: " + distance);
+		//Debug.Log("DISTANCE: " + distance);
 	
 		if(distance < 0.073){		//If distance is below 0.073, that is lower than the camera can track. This is mostly for initialization since distance defaults to a really low number.
 			distance = 0.4;			//thus we set the distance in between the minimum and maximum threshold, which as of now is 0.3 and 0.5, so it's set to 0.4

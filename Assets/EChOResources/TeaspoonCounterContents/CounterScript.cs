@@ -75,7 +75,7 @@ public class CounterScript : MonoBehaviour{
 		} else {
 			this.gameObject.transform.GetChild (0).localPosition = new Vector3 (-3.5f, 0f, 3.9f); 
 		}
-			
+		//Debug.Log (text_mesh.text);
 			
     }
 
