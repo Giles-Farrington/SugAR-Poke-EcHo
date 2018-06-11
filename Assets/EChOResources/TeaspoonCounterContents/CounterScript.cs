@@ -71,9 +71,9 @@ public class CounterScript : MonoBehaviour{
 
 		//position for text of the number of teaspoon
 		if (int.Parse (text_mesh.text) < 10) {
-			this.gameObject.transform.GetChild (0).localPosition = new Vector3 (-1.59f, 0f, 4.1f); 
+			this.gameObject.transform.GetChild (0).localPosition = new Vector3 (-1.59f, 0f, 4.7f); 
 		} else {
-			this.gameObject.transform.GetChild (0).localPosition = new Vector3 (-3.5f, 0f, 3.9f); 
+			this.gameObject.transform.GetChild (0).localPosition = new Vector3 (-3.5f, 0f, 4.7f); 
 		}
 		//Debug.Log (text_mesh.text);
 			
