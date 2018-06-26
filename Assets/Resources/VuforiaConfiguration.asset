@@ -42,6 +42,11 @@ MonoBehaviour:
       DistortionCoefficients: {x: 0, y: 0}
       FieldOfView: {x: 0, y: 0, z: 0, w: 0}
       ContainsMagnet: 0
+  databaseLoad:
+    dataSetsToLoad:
+    - SugAR_Poke_v1_33
+    dataSetsToActivate:
+    - SugAR_Poke_v1_33
   videoBackground:
     clippingMode: 0
     numDivisions: 2

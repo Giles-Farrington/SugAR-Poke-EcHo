@@ -10,12 +10,9 @@ using UnityEngine;
 using Vuforia;
 
 /// <summary>
-/// A custom handler that registers for Vuforia initialization errors
-/// 
-/// Changes made to this file could be overwritten when upgrading the Vuforia version. 
-/// When implementing custom error handler behavior, consider inheriting from this class instead.
+///     A custom handler that registers for Vuforia initialization errors
 /// </summary>
-public class DefaultInitializationErrorHandler : VuforiaMonoBehaviour
+public class DefaultInitializationErrorHandler : MonoBehaviour
 {
     #region Vuforia_lifecycle_events
 
