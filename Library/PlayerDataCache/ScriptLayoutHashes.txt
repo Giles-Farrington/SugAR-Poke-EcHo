@@ -1,6 +1,6 @@
 iOS
 PlayerPath?
-/Users/corbinobrien/Desktop/SugAR Poke v1.33
+/Users/corbinobrien/Desktop/SugARPoke
 SceneListBegin?
 Assets/EChOResources/Vending Machine Level Assets/SugARPokeV1_33.unity
 SceneListEnd?
