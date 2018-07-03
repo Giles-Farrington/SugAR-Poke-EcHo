@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
+using System;
 
 public class CounterScript : MonoBehaviour{
 
@@ -51,24 +52,25 @@ public class CounterScript : MonoBehaviour{
 		for(int j = reverseOutput.Length - 1; j >= 0; j--){
           finalOutput += reverseOutput[j];
         }
-
-        if(finalOutput == "")
+        if (finalOutput == "")
         {
             finalOutput = "Error! \\n Teaspoon value not found!";
         }
-		//Debug.LogError ("Final output is " + finalOutput);
-		text_mesh.text = finalOutput;
 
-		if (finalOutput == "0")
-        {
-            this.GetComponent<MeshRenderer>().material = backgrounds[0];
-        }
-        else
-        {
-            this.GetComponent<MeshRenderer>().material = backgrounds[1];
-        }
+        text_mesh.text = finalOutput;
+        //Determine label shape by the teaspoon number
 
+        int finalOutputNum = Convert.ToInt32(finalOutput);
 
+        if (finalOutputNum == 0) this.GetComponent<MeshRenderer>().material = backgrounds[0];
+
+        else if (finalOutputNum >= 1 && finalOutputNum <= 6) this.GetComponent<MeshRenderer>().material = backgrounds[1];
+
+        else if (finalOutputNum >= 7 && finalOutputNum <= 12) this.GetComponent<MeshRenderer>().material = backgrounds[2];
+
+        else this.GetComponent<MeshRenderer>().material = backgrounds[3];
+
+       
 		//position for text of the number of teaspoon
 		if (int.Parse (text_mesh.text) < 10) {
 			this.gameObject.transform.GetChild (0).localPosition = new Vector3 (-1.59f, 0f, 4.7f); 

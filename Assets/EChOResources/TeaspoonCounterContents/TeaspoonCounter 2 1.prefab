@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721659707282888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.241, y: 0.974, z: 0.419}
+  m_LocalPosition: {x: 0.241, y: 0, z: 0.12}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_Children:
   - {fileID: 4387379097987726}
@@ -87,6 +87,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -121,6 +122,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 77c1e34031a733547bda678af6b602a5, type: 2}
   m_StaticBatchInfo:
@@ -166,6 +168,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!102 &102261243039032718
 TextMesh:
   serializedVersion: 3
@@ -201,6 +204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgrounds:
-  - {fileID: 2100000, guid: 4b5840c844b92471288d0615672b0f2d, type: 2}
-  - {fileID: 2100000, guid: 5924567cacad948da805cca356c5bd4a, type: 2}
+  - {fileID: 2100000, guid: 4781b33805d754c4da184fbbbfd26bc5, type: 2}
+  - {fileID: 2100000, guid: 9ab73ab574fee4475a54b7e1e925e9a9, type: 2}
+  - {fileID: 2100000, guid: ea5230c8069fc43b9b9e48a4a2c995ed, type: 2}
+  - {fileID: 2100000, guid: 188b1a70b697641399fea49eca7e629b, type: 2}
   fileName: 
