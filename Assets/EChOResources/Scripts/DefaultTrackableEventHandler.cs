@@ -67,7 +67,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
         Vector3 delta = Camera.main.transform.position - mTrackableBehaviour.transform.position; //Gets updated current image target distance every update frame
         distance = delta.magnitude;
-        Debug.Log("DISTANCE: " + distance);
+        //Debug.Log("DISTANCE: " + distance);
 
 
         if (distance < 0.073)
@@ -179,8 +179,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         //scannedList.Add (imgTargetName);
         //text_mesh_label.text = scannedList [0];
 
-
-
+        //Color Detection Code by Matthew Clinton
+        ColorDetector cd = Camera.main.GetComponent<ColorDetector>();
+        cd.DetermineProduct(imgTargetName, transform, distance);
     }
 
 
