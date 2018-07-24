@@ -11,6 +11,19 @@ public class ColorDetectableStorage : MonoBehaviour {
     [SerializeField]
     ColorDetectable[] colorDetectedBrands;
 
+    public bool isColorDetectedBrand(string productName)
+    {
+        foreach(string brandName in inputBrand)
+        {
+            if (brandName.Equals(inputBrand))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 	public void AddBrands()
     {
         colorDetectedBrands = new ColorDetectable[inputBrand.Length];

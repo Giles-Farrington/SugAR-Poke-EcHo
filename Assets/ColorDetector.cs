@@ -120,7 +120,7 @@ public class ColorDetector : MonoBehaviour {
         string determinedProductName = null;
         string brand = DetermineBrand(currentProduct);
 
-        if (brand == null)
+        if (brand == null || !cds.isColorDetectedBrand(brand))
         {
             //No Brand Found
             actualProduct = null;
