@@ -73,8 +73,10 @@
     <Compile Include="Assets\EChOResources\TeaspoonCounterContents\TemporaryUIScript.cs" />
     <Compile Include="Assets\FindTspNumEventHandler.cs" />
     <Compile Include="Assets\SimpleCloudHandler.cs" />
+    <Compile Include="Assets\SplashScreen\SceneManagerScript.cs" />
     <Compile Include="Assets\TransferedInfo\Scripts\DataManager.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
+    <None Include="Assets\StreamingAssets\Vuforia\New-Yogurts.xml" />
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\Mayor-Demo.xml" />
     <None Include="Assets\VuforiaFiles\StreamingAssets\VuforiaXmlFiles\VuforiaMars_ModelTarget.xml" />
