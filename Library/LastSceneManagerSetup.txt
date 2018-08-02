@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/EChOResources/Vending Machine Level Assets/SugARPokeV1_33.unity
+- path: Assets/SplashScreenScene.unity
   isLoaded: 1
   isActive: 1

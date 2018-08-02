@@ -28,7 +28,7 @@ public class CounterScript : MonoBehaviour{
 		transform.rotation = rotation;
 	}	
 	//
-    public void GetTeaspoonValue(string fileName)
+    public string GetTeaspoonValue(string fileName)
     {
         //Lines get the TextMesh component and set the proper font size and font color
         TextMesh text_mesh = this.GetComponentInChildren<TextMesh>();
@@ -75,8 +75,9 @@ public class CounterScript : MonoBehaviour{
 		} else {
 			this.gameObject.transform.GetChild (0).localPosition = new Vector3 (-3.5f, 0f, 4.7f); 
 		}
-		//Debug.Log (text_mesh.text);
-			
+        //Debug.Log (text_mesh.text);
+
+        return finalOutput;
     }
 
 

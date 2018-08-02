@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="Paleonola-GranolaMaplePancake-283g-8" size="0.100000 0.085938" />
-    <ImageTarget name="Paleonola-GranolaTheOriginal-283g-10" size="0.100000 0.078542" />
+    <ImageTarget name="IMG_2098" size="1.000000 0.678623" />
+    <ImageTarget name="Paleonola-GranolaChocolateFix-283g-10" size="0.100000 0.174863" />
+    <ImageTarget name="Paleonola-GranolaPinaColada-283g-8" size="0.100000 0.170778" />
+    <ImageTarget name="Paleonola-GranolaTheOriginal-283g-10" size="0.100000 0.169312" />
+    <ImageTarget name="Trial-ApplePie" size="100.000000 59.422333" />
+    <ImageTarget name="Trial-Paleonola" size="100.000000 64.351852" />
+    <ImageTarget name="Paleonola-GranolaMaplePancake-283g-8" size="0.100000 0.174880" />
+    <ImageTarget name="Paleonola-GranolaApplePie-283g-8" size="0.100000 0.173455" />
+    <ImageTarget name="WishBone-DressingLightWestern-16floz-48" size="0.100000 0.100000" />
+    <ImageTarget name="WishBone-DressingTheOriginalWestern-16floz-44" size="0.100000 0.091275" />
     <ImageTarget name="Wegmans-GranolaPumpkinFlax-340-17" size="0.100000 0.140841" />
     <ImageTarget name="NewmansOwn-DressingLightItalian-16floz-0" size="0.100000 0.166335" />
-    <ImageTarget name="WishBone-DressingTheOriginalWestern-16floz-44" size="0.100000 0.150336" />
     <ImageTarget name="WishBone-DressingRedWineVinaigrette-16floz-4" size="0.100000 0.155970" />
     <ImageTarget name="WishBone-DressingRanch-16floz-4" size="0.100000 0.169718" />
-    <ImageTarget name="WishBone-DressingLightWestern-16floz-48" size="0.100000 0.157554" />
     <ImageTarget name="WishBone-DressingItalian-16floz-16" size="0.100000 0.182090" />
     <ImageTarget name="NewmansOwn-DressingLiteItalian-16floz-0" size="0.100000 0.141447" />
-    <ImageTarget name="Paleonola-GranolaApplePie-283g-8" size="0.100000 0.089140" />
-    <ImageTarget name="Paleonola-GranolaChocolateFix-283g-10" size="0.100000 0.077460" />
-    <ImageTarget name="Paleonola-GranolaPinaColada-283g-8" size="0.100000 0.092437" />
     <ImageTarget name="HiddenValley-DressingTheOriginalRanch-16floz-4" size="0.100000 0.058475" />
     <ImageTarget name="HiddenValley-DressingTheOriginalRanchFatFree-16floz-12" size="0.100000 0.062355" />
     <ImageTarget name="HiddenValley-DressingColeslaw-16floz-16" size="0.100000 0.133333" />

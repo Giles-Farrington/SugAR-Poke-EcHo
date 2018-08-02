@@ -6,5 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/EChOResources/Vending Machine Level Assets/VendingMachineLocal.unity
+    path: Assets/SplashScreenScene.unity
+    guid: 402fed73020385d4199ae86f811a20b7
+  - enabled: 1
+    path: Assets/EChOResources/Vending Machine Level Assets/SugARPokeV1_33.unity
     guid: 7739bf6a29ff54bb691813ce1a34b832
+  m_configObjects: {}
