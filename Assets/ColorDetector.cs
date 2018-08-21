@@ -120,9 +120,19 @@ public class ColorDetector : MonoBehaviour {
         string determinedProductName = null;
         string brand = DetermineBrand(currentProduct);
 
+
         if (brand == null || !cds.isColorDetectedBrand(brand))
         {
             //No Brand Found
+            //for the shopping cart
+            //TODO: CHECK THAT THIS SHIT WORKS AND MAKE ALL OF IT EQUAL
+            Debug.Log("MEME");
+            //string productName = imgTarget.GetComponent<Vuforia.ImageTargetBehaviour>().TrackableName;
+            dataRectifier.SetImageValidity(false);
+            //dataRectifier.correctedFoodName = productName;
+            //
+            dataRectifier.correctedFoodName = fileName;
+
             actualProduct = null;
             return null;
         }
@@ -176,6 +186,7 @@ public class ColorDetector : MonoBehaviour {
     /// <returns>The brand of the product</returns>
     public string DetermineBrand(string product)
     {
+        //TODO I NEED TO FIX THIS
         int index = product.IndexOf("-");
         if (index < 0)
         {

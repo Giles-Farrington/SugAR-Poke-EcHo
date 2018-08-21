@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Matt/Desktop/DevBuild/JulyRelease/SplashScreenBuild.apk
+C:/Users/Matt/Desktop/DevBuild/JulyRelease/ShoppingCartBuild.apk
 SceneListBegin?
 Assets/SplashScreenScene.unity
 Assets/EChOResources/Vending Machine Level Assets/SugARPokeV1_33.unity
@@ -96,7 +96,6 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-e51e2fd95db09049086fc3286311d202 Assembly-CSharp.dll:.ColorDetector
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -188,6 +187,8 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 01e6f145049f3a676df6dc247eabf176 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GettingSpreadsheetInfo
+9613b143f970e8ca95e3b993b50dd024 Assembly-CSharp.dll:.ShoppingCartSystem
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DefaultTrackableEventHandler
 32e8fe00b63ed946490b898f6024a2f2 Facebook.Unity.Settings.dll:Facebook.Unity.Settings.FacebookSettings
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -223,10 +224,12 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FeedbackScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.increaseAmountButton
 e132125f32a9e085fe2c1b6a19c82756 Assembly-CSharp.dll:.TemporaryUIScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FindTspNumEventHandler
 2b5897c57932c456cdcd82acde2afe9c Assembly-CSharp.dll:.DataRectifier
 498f4bdb374a313d1e33f2138cdeec3b Assembly-CSharp.dll:.SceneManagerScript
+e51e2fd95db09049086fc3286311d202 Assembly-CSharp.dll:.ColorDetector
 bc79872c81f3cda9be1ec427f70f92aa Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 0561521e336e270e6e5a9c61387cb838 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
 bc79872c81f3cda9be1ec427f70f92aa Vuforia.UnityExtensions.dll:Vuforia.AnchorStageBehaviour

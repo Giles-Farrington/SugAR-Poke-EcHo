@@ -11,11 +11,11 @@ public class TemporaryUIScript : MonoBehaviour {
     public Transform camera;
     public GameObject replacer;
     [SerializeField]
-    public static int x = 0;
+    private static int x = 2;
 
     private void Update()
     {
-        if(x == 2)
+        if(x == 3 || replacer == null)
         {
             Debug.Log("x == 0");
             return;
@@ -24,21 +24,20 @@ public class TemporaryUIScript : MonoBehaviour {
         Debug.Log("Started Script");
         foreach (Transform child in camera)
         {
-            /*
+            
             foreach(Transform c in child)
             {
                 DestroyImmediate(c.gameObject);
             }
-            */
 
-            //Transform tsp = Instantiate(replacer, child).transform;
-            //tsp.name = "TeaspoonCounter 2 1";
+            Transform tsp = Instantiate(replacer, child).transform;
+            tsp.name = "TeaspoonCounter 2 1";
 
-            Transform tsp = child.Find("TeaspoonCounter 2 1");
+            //Transform tsp = child.Find("TeaspoonCounter 2 1");
             tsp.localPosition = new Vector3(.086f, -.031f, -0.458f);
             
         }
-        x = 2;
+        x = 3;
         Debug.Log("Complete");
         DestroyImmediate(this.gameObject);
     }
