@@ -13,6 +13,11 @@ public class ShoppingCartSystem : MonoBehaviour {
     public Text totalTSP;
     Animator anim, navigationBarAnim;
 
+    //sidebar sprites
+    public Animator sideBarAnim;
+    public Image sideBarButton;
+    public Sprite sideBarOpenSprite, sideBarCloseSprite;
+
     private Canvas c;
     //public Text debugText;
 
@@ -20,9 +25,9 @@ public class ShoppingCartSystem : MonoBehaviour {
     GraphicRaycaster gr;
     EventSystem es;
 
-    //Sprite Stuff
-    public Image cartUIImage;
-    public Sprite cartNotUpdated, cartUpdated;
+    //shoppingcart UI stuff
+    public GameObject prefabExclamationPoint;
+    GameObject currentExclamationPoint;
 
     bool cartDisplayed;
     bool quanityIconsDisplayed;
@@ -86,9 +91,11 @@ public class ShoppingCartSystem : MonoBehaviour {
         amountParent.Find("AmountText").GetComponent<Text>().text = c.amountInCart.ToString();
         UpdateTotalTSP();
 
-        if(cartDisplayed == false)
+        if(cartDisplayed == false && currentExclamationPoint == null)
         {
-            cartUIImage.sprite = cartUpdated;
+            //Cart Unchecked Item
+            Transform shoppingCartButton = navigationBar.transform.Find("Cart_Button");
+            currentExclamationPoint = Instantiate(prefabExclamationPoint, shoppingCartButton);
         }
     }
 
@@ -100,7 +107,8 @@ public class ShoppingCartSystem : MonoBehaviour {
 
         if (cartDisplayed == true)
         {
-            cartUIImage.sprite = cartNotUpdated;
+            //Cart Back To Normal
+            Destroy(currentExclamationPoint);
         }
     }
 
@@ -320,6 +328,24 @@ public class ShoppingCartSystem : MonoBehaviour {
         navigationBarAnim = navigationBar.GetComponent<Animator>();
         cartDisplayed = false;
         UpdateTotalTSP();
+    }
+
+    public void ToggleSidebar()
+    {
+        bool onScreen = sideBarAnim.GetBool("onScreen");
+        onScreen = !onScreen;
+        ToggleDisplayCart(false);
+
+        if(onScreen == false)
+        {
+            sideBarButton.sprite = sideBarOpenSprite;
+        }
+        else
+        {
+            sideBarButton.sprite = sideBarCloseSprite;
+        }
+
+        sideBarAnim.SetBool("onScreen", onScreen);
     }
 
     private void Update()
