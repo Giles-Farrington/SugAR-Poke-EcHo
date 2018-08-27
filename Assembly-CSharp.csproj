@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AndroidSplitLoadFirstScene.cs" />
     <Compile Include="Assets\ColorDetectable.cs" />
     <Compile Include="Assets\ColorDetectableStorage.cs" />
     <Compile Include="Assets\ColorDetector.cs" />
