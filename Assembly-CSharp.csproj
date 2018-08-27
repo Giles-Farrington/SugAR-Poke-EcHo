@@ -68,9 +68,13 @@
     <Compile Include="Assets\EChOResources\FeedbackScript.cs" />
     <Compile Include="Assets\EChOResources\Scripts\DefaultTrackableEventHandler.cs" />
     <Compile Include="Assets\EChOResources\Scripts\NativeShareScript.cs" />
+    <Compile Include="Assets\EChOResources\Scripts\ScrollSnapRect.cs" />
     <Compile Include="Assets\EChOResources\Scripts\WebURLScript.cs" />
     <Compile Include="Assets\EChOResources\TeaspoonCounterContents\CounterScript.cs" />
     <Compile Include="Assets\EChOResources\TeaspoonCounterContents\TemporaryUIScript.cs" />
+    <Compile Include="Assets\EChOResources\Tutorial\Tutorial.cs" />
+    <Compile Include="Assets\EChOResources\Tutorial\Tutorial2.cs" />
+    <Compile Include="Assets\EChOResources\Tutorial\videobye.cs" />
     <Compile Include="Assets\FindTspNumEventHandler.cs" />
     <Compile Include="Assets\ShoppingCartStuff\increaseAmountButton.cs" />
     <Compile Include="Assets\ShoppingCartStuff\ShoppingCartSystem.cs" />
