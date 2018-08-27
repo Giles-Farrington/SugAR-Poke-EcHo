@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneManagerScript : MonoBehaviour {
+public class iOSSceneManagerScript : MonoBehaviour {
 
     public float waitTime;
     //Goes to the next scene TODO: Still hardcoded

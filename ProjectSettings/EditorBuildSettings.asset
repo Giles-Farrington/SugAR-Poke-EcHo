@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ObbExtractorScene.unity
     guid: e6b005d31d24b424991460f3bca4e0c3
   - enabled: 0
