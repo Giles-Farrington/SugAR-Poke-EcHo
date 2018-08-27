@@ -115,10 +115,8 @@ public class ColorDetector : MonoBehaviour {
     {
         Vector3 screenPos = Camera.main.WorldToScreenPoint(imgTarget.position);
         UpdateObjectScreenPosition(screenPos);
-
-        string currentProduct = fileName;
         string determinedProductName = null;
-        string brand = DetermineBrand(currentProduct);
+        string brand = DetermineBrand(fileName);
 
 
         if (brand == null || !cds.isColorDetectedBrand(brand))
@@ -179,20 +177,30 @@ public class ColorDetector : MonoBehaviour {
         return determinedProductName;
     }
 
+    //TODO, naming convention changed. What is returned is only the upc now.
     /// <summary>
     /// Determines the brand of the product based off of the currently recognized image.
     /// </summary>
     /// <param name="product">The Vuforia file name of the product</param>
     /// <returns>The brand of the product</returns>
-    public string DetermineBrand(string product)
+    public string DetermineBrand(string fileName)
     {
         //TODO I NEED TO FIX THIS
-        int index = product.IndexOf("-");
-        if (index < 0)
+        string upcCode = "";
+
+        foreach (char c in fileName)
         {
-            return null;
+            if (System.Char.IsDigit(c))
+            {
+                upcCode += c;
+            }
+            else
+            {
+                break;
+            }
         }
-        return product.Substring(0, index);
+
+        return GettingSpreadsheetInfo.Brand(upcCode);
     }
 
     //TODO: THE CHECKED AREA IS POSSIBLY TO LARGE, SCALING ISSUES WHEN ROTATING, and AVERAGE COLOR IS BROWNISH FOR THE RED PRODUCT

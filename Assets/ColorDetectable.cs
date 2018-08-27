@@ -16,6 +16,8 @@ public class ColorDetectable
     public bool debugging = true;
     public bool debugProductCreation = true, debugProductRecognition = true;
 
+
+    //TODO, naming convention changed, check within method for comment
     /// <summary>
     /// Give the brand isn't null, this will auto detect products and put them in the array.
     /// </summary>
@@ -33,10 +35,8 @@ public class ColorDetectable
         {
             Material imgTargetMaterial = imgTarget.GetComponent<MeshRenderer>().material;
             string vuforiaFileName = imgTargetMaterial.name;
-            //Debug.Log("Product " + vuforiaFileName);
-
+            //TODO, brand string is just UPC, fix this
             string brand = colorDetector.DetermineBrand(vuforiaFileName);
-            //Debug.Log("Brand: " + brand);
 
             if (this.brand.Equals(brand))
             {
@@ -85,6 +85,8 @@ public class ColorDetectable
         return false;
     }
 
+
+    //TODO, naming convention changed so the string "brand" is now upc code.
     public ColorDetectable(string brand)
     {
         this.brand = brand;
