@@ -76,6 +76,7 @@
     <Compile Include="Assets\EChOResources\Tutorial\Tutorial2.cs" />
     <Compile Include="Assets\EChOResources\Tutorial\videobye.cs" />
     <Compile Include="Assets\FindTspNumEventHandler.cs" />
+    <Compile Include="Assets\OpenWebpage.cs" />
     <Compile Include="Assets\ShoppingCartStuff\increaseAmountButton.cs" />
     <Compile Include="Assets\ShoppingCartStuff\ShoppingCartSystem.cs" />
     <Compile Include="Assets\SimpleCloudHandler.cs" />
