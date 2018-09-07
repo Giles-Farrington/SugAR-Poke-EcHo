@@ -21,6 +21,8 @@ public class ObbExtractor : MonoBehaviour
         "SugAR_Poke_v1_33.xml",
         "YogurtAugustNinth2018.dat",
         "YogurtAugustNinth2018.xml",
+        "YogurtSeptemberSecond2018.dat",
+        "YogurtSeptemberSecond2018.xml"
 
     };
         foreach (var filename in filesInOBB)
